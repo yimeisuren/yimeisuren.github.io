@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/yimeisuren/yimeisuren.github.io/"/>
-  <updated>2023-03-12T15:24:04.922Z</updated>
+  <updated>2023-05-10T07:39:43.173Z</updated>
   <id>https://github.com/yimeisuren/yimeisuren.github.io/</id>
   
   <author>
@@ -17,13 +17,61 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/03/12/juc/volatile-guan-jian-zi/"/>
-    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/03/12/juc/volatile-guan-jian-zi/</id>
-    <published>2023-03-12T15:10:57.201Z</published>
-    <updated>2023-03-12T15:24:04.922Z</updated>
+    <title>Spring Data</title>
+    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/05/05/springdata/"/>
+    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/05/05/springdata/</id>
+    <published>2023-05-05T10:58:49.000Z</published>
+    <updated>2023-05-10T07:39:43.173Z</updated>
     
     <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Spring-Data&quot;&gt;&lt;a href=&quot;#Spring-Data&quot; class=&quot;headerlink&quot; title=&quot;Spring Data&quot;&gt;&lt;/a&gt;Spring Data&lt;/h1&gt;&lt;h2 id=&quot;Spring-Data-JPA&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Spring" scheme="https://github.com/yimeisuren/yimeisuren.github.io/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring揭秘</title>
+    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/05/01/spring-jie-mi/"/>
+    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/05/01/spring-jie-mi/</id>
+    <published>2023-05-01T03:57:37.000Z</published>
+    <updated>2023-05-02T12:08:01.095Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="书籍阅读" scheme="https://github.com/yimeisuren/yimeisuren.github.io/tags/%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/04/20/lun-wen-05-tu-shen-jing-wang-luo/"/>
+    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/04/20/lun-wen-05-tu-shen-jing-wang-luo/</id>
+    <published>2023-04-20T01:49:32.794Z</published>
+    <updated>2023-04-20T09:01:52.606Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;图深度学习&quot;&gt;&lt;a href=&quot;#图深度学习&quot; class=&quot;headerlink&quot; title=&quot;图深度学习&quot;&gt;&lt;/a&gt;图深度学习&lt;/h1&gt;&lt;h2 id=&quot;第1章-绪论&quot;&gt;&lt;a href=&quot;#第1章-绪论&quot; class=&quot;headerlink&quot;
+        
+      
     
     </summary>
     
@@ -31,36 +79,11 @@
   </entry>
   
   <entry>
-    <title>String类详解</title>
-    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/03/12/java/string-lei-xiang-jie/"/>
-    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/03/12/java/string-lei-xiang-jie/</id>
-    <published>2023-03-12T14:40:48.000Z</published>
-    <updated>2023-03-12T14:57:06.490Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;#String的基本特性&lt;/p&gt;
-&lt;h2 id=&quot;String的不可变性&quot;&gt;&lt;a href=&quot;#String的不可变性&quot; class=&quot;headerlink&quot; title=&quot;String的不可变性&quot;&gt;&lt;/a&gt;String的不可变性&lt;/h2&gt;&lt;pre
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Java 基础" scheme="https://github.com/yimeisuren/yimeisuren.github.io/tags/Java-%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
     <title></title>
-    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/02/03/juc/suo/"/>
-    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/02/03/juc/suo/</id>
-    <published>2023-02-03T14:20:32.301Z</published>
-    <updated>2023-03-12T15:14:17.546Z</updated>
+    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/04/16/lun-wen-00-cai-liao/"/>
+    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/04/16/lun-wen-00-cai-liao/</id>
+    <published>2023-04-16T09:55:01.342Z</published>
+    <updated>2023-04-18T11:30:24.172Z</updated>
     
     <summary type="html">
     
@@ -68,7 +91,8 @@
       
         
         
-          &lt;h1 id=&quot;锁的两种实现&quot;&gt;&lt;a href=&quot;#锁的两种实现&quot; class=&quot;headerlink&quot; title=&quot;锁的两种实现&quot;&gt;&lt;/a&gt;锁的两种实现&lt;/h1&gt;&lt;h2 id=&quot;可重入锁&quot;&gt;&lt;a href=&quot;#可重入锁&quot; class=&quot;headerlink&quot;
+          &lt;p&gt;&lt;strong&gt;social network(社交网络)&lt;/strong&gt;: graphs of people&lt;/p&gt;
+&lt;p&gt;Graphs are powerful structures useful not only for representing connected
         
       
     
@@ -78,11 +102,27 @@
   </entry>
   
   <entry>
+    <title>BERT</title>
+    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/04/16/lun-wen-03-zi-jian-du-xue-xi-bert/"/>
+    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/04/16/lun-wen-03-zi-jian-du-xue-xi-bert/</id>
+    <published>2023-04-16T01:07:45.000Z</published>
+    <updated>2023-04-16T06:12:28.759Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="论文" scheme="https://github.com/yimeisuren/yimeisuren.github.io/tags/%E8%AE%BA%E6%96%87/"/>
+    
+  </entry>
+  
+  <entry>
     <title></title>
-    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/02/03/juc/ji-he-de-xian-cheng-an-quan/"/>
-    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/02/03/juc/ji-he-de-xian-cheng-an-quan/</id>
-    <published>2023-02-03T12:29:14.921Z</published>
-    <updated>2023-02-03T12:30:05.343Z</updated>
+    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/04/14/spring-yuan-ma-jie-xi-05/"/>
+    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/04/14/spring-yuan-ma-jie-xi-05/</id>
+    <published>2023-04-14T07:09:11.853Z</published>
+    <updated>2023-04-14T07:26:35.014Z</updated>
     
     <summary type="html">
     
@@ -90,12 +130,348 @@
       
         
         
-          &lt;h1 id=&quot;集合的线程安全问题&quot;&gt;&lt;a href=&quot;#集合的线程安全问题&quot; class=&quot;headerlink&quot;
+          &lt;h1 id=&quot;ComponentScan-组件扫描的实现逻辑&quot;&gt;&lt;a href=&quot;#ComponentScan-组件扫描的实现逻辑&quot; class=&quot;headerlink&quot; title=&quot;@ComponentScan 组件扫描的实现逻辑&quot;&gt;&lt;/a&gt;@ComponentScan
         
       
     
     </summary>
     
+    
+  </entry>
+  
+  <entry>
+    <title>Bean的生命周期</title>
+    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/04/13/spring-yuan-ma-jie-xi-04/"/>
+    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/04/13/spring-yuan-ma-jie-xi-04/</id>
+    <published>2023-04-13T13:57:37.000Z</published>
+    <updated>2023-04-14T06:32:22.975Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Bean-的生命周期&quot;&gt;&lt;a href=&quot;#Bean-的生命周期&quot; class=&quot;headerlink&quot; title=&quot;Bean 的生命周期&quot;&gt;&lt;/a&gt;Bean
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Spring源码" scheme="https://github.com/yimeisuren/yimeisuren.github.io/tags/Spring%E6%BA%90%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/04/11/lun-wen-02-shi-jian-xu-lie/"/>
+    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/04/11/lun-wen-02-shi-jian-xu-lie/</id>
+    <published>2023-04-11T04:32:52.393Z</published>
+    <updated>2023-04-16T06:10:46.583Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;StemGNN（2020-NIPS&quot;&gt;&lt;a href=&quot;#StemGNN（2020-NIPS&quot; class=&quot;headerlink&quot; title=&quot;StemGNN（2020 NIPS)&quot;&gt;&lt;/a&gt;StemGNN（2020 NIPS)&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/04/07/dozer-de-shi-yong/"/>
+    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/04/07/dozer-de-shi-yong/</id>
+    <published>2023-04-07T09:40:29.342Z</published>
+    <updated>2023-04-07T09:43:32.859Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Dozer&quot;&gt;&lt;a href=&quot;#Dozer&quot; class=&quot;headerlink&quot; title=&quot;Dozer&quot;&gt;&lt;/a&gt;Dozer&lt;/h1&gt;&lt;p&gt;作用：BeanUtils 的升级版，用于实现的对两个 Java Bean
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>权限管理系统</title>
+    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/04/06/hei-ma-pin-da-quan-xian-guan-li-xi-tong/"/>
+    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/04/06/hei-ma-pin-da-quan-xian-guan-li-xi-tong/</id>
+    <published>2023-04-06T14:07:45.000Z</published>
+    <updated>2023-04-15T07:46:17.740Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;权限管理系统&quot;&gt;&lt;a href=&quot;#权限管理系统&quot; class=&quot;headerlink&quot; title=&quot;权限管理系统&quot;&gt;&lt;/a&gt;权限管理系统&lt;/h1&gt;&lt;h2 id=&quot;项目概述&quot;&gt;&lt;a href=&quot;#项目概述&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="项目实战" scheme="https://github.com/yimeisuren/yimeisuren.github.io/tags/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自定义 Spring-Boot-Starter</title>
+    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/04/06/springboot-starter-zi-ding-yi/"/>
+    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/04/06/springboot-starter-zi-ding-yi/</id>
+    <published>2023-04-06T01:28:52.000Z</published>
+    <updated>2023-04-07T09:39:55.248Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;自定义-spring-boot-starter&quot;&gt;&lt;a href=&quot;#自定义-spring-boot-starter&quot; class=&quot;headerlink&quot; title=&quot;自定义 spring-boot-starter&quot;&gt;&lt;/a&gt;自定义
+        
+      
+    
+    </summary>
+    
+    
+      <category term="SpringBoot" scheme="https://github.com/yimeisuren/yimeisuren.github.io/tags/SpringBoot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis集群</title>
+    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/04/05/redis-ji-qun/"/>
+    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/04/05/redis-ji-qun/</id>
+    <published>2023-04-04T19:33:39.000Z</published>
+    <updated>2023-04-05T12:09:31.696Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Redis-集群&quot;&gt;&lt;a href=&quot;#Redis-集群&quot; class=&quot;headerlink&quot; title=&quot;Redis 集群&quot;&gt;&lt;/a&gt;Redis 集群&lt;/h1&gt;&lt;h2 id=&quot;Redis-集群的安装配置&quot;&gt;&lt;a href=&quot;#Redis-集群的安装配置&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Redis" scheme="https://github.com/yimeisuren/yimeisuren.github.io/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java面试指南</title>
+    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/04/04/java-mian-shi-zhi-nan/"/>
+    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/04/04/java-mian-shi-zhi-nan/</id>
+    <published>2023-04-04T01:15:42.000Z</published>
+    <updated>2023-04-04T13:24:14.678Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Java-面试指南&quot;&gt;&lt;a href=&quot;#Java-面试指南&quot; class=&quot;headerlink&quot; title=&quot;Java 面试指南&quot;&gt;&lt;/a&gt;Java
+        
+      
+    
+    </summary>
+    
+      <category term="面试" scheme="https://github.com/yimeisuren/yimeisuren.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="Java面试" scheme="https://github.com/yimeisuren/yimeisuren.github.io/tags/Java%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Crossformer</title>
+    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/04/04/lun-wen-01-shi-jian-xu-lie/"/>
+    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/04/04/lun-wen-01-shi-jian-xu-lie/</id>
+    <published>2023-04-04T01:07:45.000Z</published>
+    <updated>2023-04-16T06:11:59.100Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Crossformer（2023-ICLR）&quot;&gt;&lt;a href=&quot;#Crossformer（2023-ICLR）&quot; class=&quot;headerlink&quot; title=&quot;Crossformer（2023 ICLR）&quot;&gt;&lt;/a&gt;Crossformer（2023
+        
+      
+    
+    </summary>
+    
+    
+      <category term="时间序列" scheme="https://github.com/yimeisuren/yimeisuren.github.io/tags/%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ApplicationContext的实现</title>
+    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/04/03/spring-yuan-ma-jie-xi-03/"/>
+    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/04/03/spring-yuan-ma-jie-xi-03/</id>
+    <published>2023-04-03T15:57:37.000Z</published>
+    <updated>2023-04-13T12:39:05.142Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;ApplicationContext-的实现&quot;&gt;&lt;a href=&quot;#ApplicationContext-的实现&quot; class=&quot;headerlink&quot; title=&quot;ApplicationContext 的实现&quot;&gt;&lt;/a&gt;ApplicationContext
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Spring源码" scheme="https://github.com/yimeisuren/yimeisuren.github.io/tags/Spring%E6%BA%90%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTTP2</title>
+    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/04/03/http2/"/>
+    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/04/03/http2/</id>
+    <published>2023-04-03T08:18:50.000Z</published>
+    <updated>2023-04-11T17:16:00.368Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;HTTP2&quot;&gt;&lt;a href=&quot;#HTTP2&quot; class=&quot;headerlink&quot; title=&quot;HTTP2&quot;&gt;&lt;/a&gt;HTTP2&lt;/h1&gt;&lt;pre class=&quot;line-numbers language-mermaid&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+    
+      <category term="计算机网络" scheme="https://github.com/yimeisuren/yimeisuren.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis实战</title>
+    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/04/03/redis-shi-zhan/"/>
+    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/04/03/redis-shi-zhan/</id>
+    <published>2023-04-02T19:33:39.000Z</published>
+    <updated>2023-04-03T11:08:25.714Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Redis-实战&quot;&gt;&lt;a href=&quot;#Redis-实战&quot; class=&quot;headerlink&quot; title=&quot;Redis 实战&quot;&gt;&lt;/a&gt;Redis 实战&lt;/h1&gt;&lt;h2 id=&quot;第一章-初识-Redis&quot;&gt;&lt;a href=&quot;#第一章-初识-Redis&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Redis" scheme="https://github.com/yimeisuren/yimeisuren.github.io/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BeanFactory容器的实现</title>
+    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/04/02/spring-yuan-ma-jie-xi-02/"/>
+    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/04/02/spring-yuan-ma-jie-xi-02/</id>
+    <published>2023-04-02T03:57:37.000Z</published>
+    <updated>2023-04-03T15:53:32.524Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;BeanFactory-容器的实现&quot;&gt;&lt;a href=&quot;#BeanFactory-容器的实现&quot; class=&quot;headerlink&quot; title=&quot;BeanFactory 容器的实现&quot;&gt;&lt;/a&gt;BeanFactory
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Spring源码" scheme="https://github.com/yimeisuren/yimeisuren.github.io/tags/Spring%E6%BA%90%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Netty</title>
+    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/04/01/netty/"/>
+    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/04/01/netty/</id>
+    <published>2023-04-01T11:03:41.000Z</published>
+    <updated>2023-04-03T11:31:01.876Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;零拷贝-性能优化&quot;&gt;&lt;a href=&quot;#零拷贝-性能优化&quot; class=&quot;headerlink&quot; title=&quot;零拷贝(性能优化)&quot;&gt;&lt;/a&gt;零拷贝(性能优化)&lt;/h1&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Netty" scheme="https://github.com/yimeisuren/yimeisuren.github.io/tags/Netty/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IO多路复用</title>
+    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/04/01/io-duo-lu-fu-yong/"/>
+    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/04/01/io-duo-lu-fu-yong/</id>
+    <published>2023-04-01T11:03:32.000Z</published>
+    <updated>2023-04-02T05:35:08.789Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;IO模型&quot;&gt;&lt;a href=&quot;#IO模型&quot; class=&quot;headerlink&quot; title=&quot;IO模型&quot;&gt;&lt;/a&gt;IO模型&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;BIO: 同步阻塞式&lt;/p&gt;
+&lt;p&gt; 
+        
+      
+    
+    </summary>
+    
+    
+      <category term="NIO, IO多路复用" scheme="https://github.com/yimeisuren/yimeisuren.github.io/tags/NIO-IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/"/>
     
   </entry>
   
