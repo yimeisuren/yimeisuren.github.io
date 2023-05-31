@@ -8,16 +8,14 @@
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="SpringBoot面试题SpringBoot 接口开发的常用注解有哪些?
+    <meta name="description" content="SpringBoot自动配置
 
+全部加载 127 自动配置类（预先写死）
 
-注解
-作用
+按照条件装配规则，按需注入
 
-
-
-@Controller
-标记此类是一个控制器，可以返回视图解析器指定的 html 页面，通过搭配 @ResponseBody 可以将结果返回 ">
+@ConditionalOnClass 注解
+保证了在类路径下发现某个类，才会注入Bean对象。而这个“某个类”，需要导入一些特定的包">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -484,14 +482,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    196
+                    857
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
                 
@@ -507,7 +505,75 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="SpringBoot"><a href="#SpringBoot" class="headerlink" title="SpringBoot"></a>SpringBoot</h1><h1 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h1><h2 id="SpringBoot-接口开发的常用注解有哪些"><a href="#SpringBoot-接口开发的常用注解有哪些" class="headerlink" title="SpringBoot 接口开发的常用注解有哪些?"></a>SpringBoot 接口开发的常用注解有哪些?</h2><table>
+                <h1 id="SpringBoot"><a href="#SpringBoot" class="headerlink" title="SpringBoot"></a>SpringBoot</h1><p>自动配置</p>
+<ul>
+<li><p>全部加载 127 自动配置类（预先写死）</p>
+</li>
+<li><p>按照条件装配规则，按需注入</p>
+<ul>
+<li><p>@ConditionalOnClass 注解</p>
+<p>保证了在类路径下发现某个类，才会注入Bean对象。而这个“某个类”，需要导入一些特定的包。因此导入了特定的依赖，就会自动注入</p>
+</li>
+<li><p>@ConditionalOnProperty 注解</p>
+<p>配置文件中是否出现某个字段，配置了则生效</p>
+</li>
+<li><p>@ConditionalOnBean 注解</p>
+<p>判断容器中是否存在某种类型或某个名字的 Bean 组件。这种时候可以先在主启动类下查询容器中是否注入了这个 Bean 对象（按类型或按名字，getBeanDefinitionNames 方法）</p>
+</li>
+</ul>
+</li>
+<li><p>帮助用户的 Bean 规范化，以用户配置的 Bean 优先</p>
+</li>
+</ul>
+<p>以 <code>AopAutoConfiguration</code> 为例，介绍其条件装配的设计。</p>
+<ul>
+<li><code>@ConditionalOnClass</code> 和 <code>@ConditionalOnMissngClass</code> 注解本质上相同，但是折磨人的设计，``@ConditionalOnClass<code>中有</code>Class[]<code>而</code>@ConditionalOnMissingClass<code>中没有</code>Class[]`。导致前者可以直接使用 Class，而后者却要写死字符串</li>
+</ul>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token annotation punctuation">@Configuration</span><span class="token punctuation">(</span>proxyBeanMethods <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@ConditionalOnProperty</span><span class="token punctuation">(</span>prefix <span class="token operator">=</span> <span class="token string">"spring.aop"</span><span class="token punctuation">,</span> name <span class="token operator">=</span> <span class="token string">"auto"</span><span class="token punctuation">,</span> havingValue <span class="token operator">=</span> <span class="token string">"true"</span><span class="token punctuation">,</span> matchIfMissing <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AopAutoConfiguration</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Configuration</span><span class="token punctuation">(</span>proxyBeanMethods <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@ConditionalOnClass</span><span class="token punctuation">(</span>Advice<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+    <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">AspectJAutoProxyingConfiguration</span> <span class="token punctuation">{</span>
+
+        <span class="token annotation punctuation">@Configuration</span><span class="token punctuation">(</span>proxyBeanMethods <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+        <span class="token annotation punctuation">@EnableAspectJAutoProxy</span><span class="token punctuation">(</span>proxyTargetClass <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+        <span class="token annotation punctuation">@ConditionalOnProperty</span><span class="token punctuation">(</span>prefix <span class="token operator">=</span> <span class="token string">"spring.aop"</span><span class="token punctuation">,</span> name <span class="token operator">=</span> <span class="token string">"proxy-target-class"</span><span class="token punctuation">,</span> havingValue <span class="token operator">=</span> <span class="token string">"false"</span><span class="token punctuation">)</span>
+        <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">JdkDynamicAutoProxyConfiguration</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token annotation punctuation">@Configuration</span><span class="token punctuation">(</span>proxyBeanMethods <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+        <span class="token annotation punctuation">@EnableAspectJAutoProxy</span><span class="token punctuation">(</span>proxyTargetClass <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+        <span class="token annotation punctuation">@ConditionalOnProperty</span><span class="token punctuation">(</span>prefix <span class="token operator">=</span> <span class="token string">"spring.aop"</span><span class="token punctuation">,</span> name <span class="token operator">=</span> <span class="token string">"proxy-target-class"</span><span class="token punctuation">,</span> havingValue <span class="token operator">=</span> <span class="token string">"true"</span><span class="token punctuation">,</span>
+                matchIfMissing <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+        <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">CglibAutoProxyConfiguration</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Configuration</span><span class="token punctuation">(</span>proxyBeanMethods <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@ConditionalOnMissingClass</span><span class="token punctuation">(</span><span class="token string">"org.aspectj.weaver.Advice"</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@ConditionalOnProperty</span><span class="token punctuation">(</span>prefix <span class="token operator">=</span> <span class="token string">"spring.aop"</span><span class="token punctuation">,</span> name <span class="token operator">=</span> <span class="token string">"proxy-target-class"</span><span class="token punctuation">,</span> havingValue <span class="token operator">=</span> <span class="token string">"true"</span><span class="token punctuation">,</span>
+            matchIfMissing <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+    <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">ClassProxyingConfiguration</span> <span class="token punctuation">{</span>
+
+        <span class="token annotation punctuation">@Bean</span>
+        <span class="token keyword">static</span> BeanFactoryPostProcessor <span class="token function">forceAutoProxyCreatorToUseClassProxying</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">(</span>beanFactory<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>beanFactory <span class="token keyword">instanceof</span> <span class="token class-name">BeanDefinitionRegistry</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    BeanDefinitionRegistry registry <span class="token operator">=</span> <span class="token punctuation">(</span>BeanDefinitionRegistry<span class="token punctuation">)</span> beanFactory<span class="token punctuation">;</span>
+                    AopConfigUtils<span class="token punctuation">.</span><span class="token function">registerAutoProxyCreatorIfNecessary</span><span class="token punctuation">(</span>registry<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    AopConfigUtils<span class="token punctuation">.</span><span class="token function">forceAutoProxyCreatorToUseClassProxying</span><span class="token punctuation">(</span>registry<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>@ConditionalOnBean + @ConditionalOnMissingBean 搭配使用</p>
+<p>如果没有手动注入一个特定类型的对象（例如：MultipartResolver），那么由于@ConditionalOnBean的限制，那么底层也不会自动注入。但是如果用户手动注入了一个对象，但是 name 是用户任意定义的，同时框架底层可能还依赖这个 name，那么@ConditionalOnMissingBean就发挥了作用，将用户定义的这个 Bean 取一个预先定义好的别名。（这个别名是框架底层依赖的）</p>
+<p>这种设计挺巧妙，但是意义在哪里呢？如果不允许使用者在框架外面自定义多个相同类型的 Bean，那么框架底层实现时，使用getBeanByType即可，根本没必要取预先定义好的别名，这样多此一举。但是假如允许用户在框架外面自定义多个相同类型的 Bean，最终生效的是哪一个呢？</p>
+<p>这种设计的意义在于，Spring 集成别的框架时，可能这个别名是别的框架规定死的，而不是 Spring 框架对其进行了限制。使用这种设计，框架的使用者不需要知道这个规定死的字段</p>
+<h1 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h1><h2 id="SpringBoot-接口开发的常用注解有哪些"><a href="#SpringBoot-接口开发的常用注解有哪些" class="headerlink" title="SpringBoot 接口开发的常用注解有哪些?"></a>SpringBoot 接口开发的常用注解有哪些?</h2><table>
 <thead>
 <tr>
 <th>注解</th>
@@ -1265,7 +1331,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">78.6k</span>
+            <span class="white-color">162.6k</span>
             
 
             <br>

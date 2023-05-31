@@ -356,35 +356,80 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/11/11/linux/ming-ling/chown/" target="_blank">
+                    <a href="/2023/03/21/rabbitmq-de-shi-yong/" target="_blank">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="">
+                            <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="RabbitMQ的使用">
                             
-                            <span class="card-title"></span>
+                            <span class="card-title">RabbitMQ的使用</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                            chown使用
-使用前
+                            RabbitMQ同步调用方式和异步调用方式同步调用
+微服务间基于 Feign 的调用就属于同步调用方式
+缺点：
 
+耦合度高，每次加入新的需求都要修改原来的代码
+性能下降，调用者需要等待服务提供者响应，如果调用链过长则响应时间等于每次调用的时
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-03-21
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/消息队列/" class="post-category" target="_blank">
+                                    消息队列
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
 
-执行chown -R xiong:xiong xiong.txt命令
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/消息队列/" target="_blank">
+                            <span class="chip bg-color">消息队列</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/03/20/nlp-zi-ran-yu-yan-chu-li-xue-xi-bi-ji/" target="_blank">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="NLP自然语言处理学习笔记">
+                            
+                            <span class="card-title">NLP自然语言处理学习笔记</span>
+                        </div>
+                    </a>
 
--R 递归修改    改变根目录的同时，将该目录下的所有子文件修改成同样的权限
-
-
-
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                            BERT上下文无关：看一个词，输出一个词的向量。相同词的向量输出是相同的，不能体现“养只狗”和“单身狗”中“狗”的区别
+Contextualized Word Embedding
+上下文相关：看一个句子，输出每一个词的向量
 
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-11-11
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-03-20
                             </span>
                             <span class="publish-author">
                                 
@@ -393,56 +438,60 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                     </div>
 
                     
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/NLP/" target="_blank">
+                            <span class="chip bg-color">NLP</span>
+                        </a>
+                        
+                        <a href="/tags/自然语言处理/" target="_blank">
+                            <span class="chip bg-color">自然语言处理</span>
+                        </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/11/11/linux/ming-ling/man/" target="_blank">
+                    <a href="/2023/03/20/nlp-gai-shu/" target="_blank">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="">
+                            <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="NLP概述">
                             
-                            <span class="card-title"></span>
+                            <span class="card-title">NLP概述</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                            
-
-
-按键
-功能
+                            NLP 概述自然语言处理系统常常被称为“流水线”（pipeline），这是因为该系统往往包括多个处理环节，其中自然语言从“流水线”的一端输入，处理后的结果从另一端输出。
 
 
 
-空格
-向下翻页
 
 
-pagedown也就是fn+$\downarrow$
-向下翻页
 
 
-pageup
-向上翻页
+
+语音识别
+语言到文本
 
 
-/string
-向下查找string这个字符串
+语音生成
+文本到语音
 
 
-?string
-向上查找string这个字符串
+
 
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-11-11
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-03-20
                             </span>
                             <span class="publish-author">
                                 
@@ -451,65 +500,41 @@ pageup
                     </div>
 
                     
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/NLP/" target="_blank">
+                            <span class="chip bg-color">NLP</span>
+                        </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/11/11/linux/ming-ling/info/" target="_blank">
+                    <a href="/2023/03/20/juc-10-aqs-dui-lie-tong-bu-qi/" target="_blank">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="">
+                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="AQS队列同步器">
                             
-                            <span class="card-title"></span>
+                            <span class="card-title">AQS队列同步器</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                            
-
-
-按键
-功能
-解释
-
-
-
-空格
-向下翻页
-
-
-
-pagedown
-向下翻页
-
-
-
-pageup
-向上翻页
-
-
-
-tab
-在节点之间移动, 有节点的地方, 通常以*显示
-
-
-
-enter
-当光标在节点上时, 按下可以进入节点
-
-
-
-b
-移
+                            Node 节点class Node {
+    // static final 修饰的常量
+    static final Node SHARED = new Node();
+    static final Node EXCLUSIVE
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-11-11
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-03-20
                             </span>
                             <span class="publish-author">
                                 
@@ -518,61 +543,45 @@ b
                     </div>
 
                     
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/JUC/" target="_blank">
+                            <span class="chip bg-color">JUC</span>
+                        </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/11/11/linux/ming-ling/ps/" target="_blank">
+                    <a href="/2023/03/16/shu-cang/" target="_blank">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="">
+                            <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="数仓">
                             
-                            <span class="card-title"></span>
+                            <span class="card-title">数仓</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                            [options]参数表
+                            数仓项目项目准备技术选型
 
+系统数据流程图
+版本选型
 
-options
-含义
-对应单词
+集群资源规划
 
-
-
-l
-长格式输出
-long
-
-
-u
-按用户名和启动时间的顺序来显示进程
-
-
-
-j
-用任务格式来显示进程
-
-
-
-f
-用树形格式来显示进程
-
-
-
-a
-显示所有用户的所有进程
-al
+用户行为日志用户行为日志概述用户行为日志的内容，主要包含用户的各项行为信息以及行为所处的环境信息。收集这些信息的主要目的是为了优化产品和为各项分析统计指标提供数据支撑。
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-11-11
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-03-16
                             </span>
                             <span class="publish-author">
                                 
@@ -581,56 +590,39 @@ al
                     </div>
 
                     
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/大数据项目实战/" target="_blank">
+                            <span class="chip bg-color">大数据项目实战</span>
+                        </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/11/11/linux/ming-ling/ls/" target="_blank">
+                    <a href="/2023/03/16/ji-he-de-xian-cheng-an-quan/" target="_blank">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="">
+                            <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="线程安全的集合">
                             
-                            <span class="card-title"></span>
+                            <span class="card-title">线程安全的集合</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                            [options]参数表
-
-
-options
-含义
-对应单词
-
-
-
-a
-显示所有文件
-all
-
-
-l
-详细信息显示
-long
-
-
-d
-查看目录的详细信息
-director
-
-
-h
-以GB, MB, KB等更人性的方式来显示文件大小
-huma
+                            JUC中的线程安全的集合
+  所谓的线程安全的集合，指的是集合中的每一个方法是原子操作，例如 get()、put()等。但这并不表示使用了线程安全的集合就不会造成线程安全问题，正如事务不是简单地由一系列原子操作堆叠就可以实现的一样，只有正确
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-11-11
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-03-16
                             </span>
                             <span class="publish-author">
                                 
@@ -639,40 +631,41 @@ huma
                     </div>
 
                     
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/JUC/" target="_blank">
+                            <span class="chip bg-color">JUC</span>
+                        </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/11/11/tomcat/" target="_blank">
+                    <a href="/2023/03/16/spring-yuan-ma-jie-xi-01/" target="_blank">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="">
+                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="BeanFactory接口与ApplicationContext接口功能介绍">
                             
-                            <span class="card-title"></span>
+                            <span class="card-title">BeanFactory接口与ApplicationContext接口功能介绍</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                            Tomcat问题解决汇总(centos7)
+                            BeanFactory 接口和 ApplicationContext 接口功能类关系结构
+BeanFactory 功能介绍BeanFactory 是核心容器，负责管理 Bean 对象
 
-
-出现的问题
-解决方案
-链接
-
-
-
-使用yum安装tomcat
-1.官网找到安装包的超链接, 右键选择复制链接地址2.在centos中使用wget命令, 例如wget 链接地址3.在/usr/s
+BeanFactory 接口的功能只有一个 getBe
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-11-11
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-03-16
                             </span>
                             <span class="publish-author">
                                 
@@ -681,34 +674,92 @@ huma
                     </div>
 
                     
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Spring源码/" target="_blank">
+                            <span class="chip bg-color">Spring源码</span>
+                        </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/11/11/ge-chong-an-zhuang-wen-ti/" target="_blank">
+                    <a href="/2023/03/15/shen-du-you-xian-sou-suo/" target="_blank">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="">
+                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="深度优先搜索">
                             
-                            <span class="card-title"></span>
+                            <span class="card-title">深度优先搜索</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                            默认约定在/opt目录下创建文件夹module.software文件夹
-software文件夹用来存放所有的jar包
-module文件夹用来存放解压后的文件
-设置Python的阿里云镜像Windows
-windows系统在C:\Users\
+                            矩阵背景面试题13. 机器人的运动范围
+  问题描述：
+  地上有一个m行n列的方格，从坐标 [0,0] 到坐标 [m-1,n-1] 。一个机器人从坐标 [0, 0] 的格子开始移动，它每次可以向左、右、上、下移动一格（不能移动到方格外），
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-11-11
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-03-15
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/深度优先搜索/" class="post-category" target="_blank">
+                                    深度优先搜索
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Leetcode-算法/" target="_blank">
+                            <span class="chip bg-color">Leetcode 算法</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/03/14/wu-suo-bing-fa/" target="_blank">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="无锁并发">
+                            
+                            <span class="card-title">无锁并发</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                            无锁并发使用 CAS 代替锁案例演示public interface Account {
+    int getBalance();
+
+    void withdraw(int amount);
+}
+public class Thread
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-03-14
                             </span>
                             <span class="publish-author">
                                 
@@ -717,64 +768,40 @@ windows系统在C:\Users\
                     </div>
 
                     
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/JUC/" target="_blank">
+                            <span class="chip bg-color">JUC</span>
+                        </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/11/11/chang-yong-linux-ming-ling/" target="_blank">
+                    <a href="/2023/03/13/juc-02-synchronized-guan-jian-zi-xiang-jie/" target="_blank">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="">
+                            <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="Synchronized关键字详解">
                             
-                            <span class="card-title"></span>
+                            <span class="card-title">Synchronized关键字详解</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                            常用Linux命令帮助命令
-
-
-命令
-功能
-语法
-
-
-
-man
-求助
-man [命令]
-
-
-info
-求助
-info [命令]
-
-
-help
-求助
-[命令] –help
-
-
-文件目录类命令浏览目录命令
-
-
-命令
-功能
-语法
-对应单词
-
-
-
-
+                            Synchronized关键字详解Monitor对象普通对象
+wait()和notify()只有获取了锁的线程才能够调用 wait() 方法和 notify() 方法。
+可重入锁 ReentrantLock通过 lockInterrupti
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-11-11
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-03-13
                             </span>
                             <span class="publish-author">
                                 
@@ -783,65 +810,42 @@ help
                     </div>
 
                     
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/JUC/" target="_blank">
+                            <span class="chip bg-color">JUC</span>
+                        </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/11/11/mu-lu-quan-xian-he-wen-jian-quan-xian/" target="_blank">
+                    <a href="/2023/03/13/juc-03-interrupt-fang-fa-xiang-jie/" target="_blank">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="">
+                            <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Interrupt方法详解">
                             
-                            <span class="card-title"></span>
+                            <span class="card-title">Interrupt方法详解</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                            权限文件类型
+                            Interrupt方法详解Interrupt打断阻塞态线程
+  打断阻塞态的线程会抛出异常，同时清空打断状态。该异常常用来作为唤醒手段
 
-
-特征
-类型
-含义
-
-
-
-d
-目录
-directory
-
-
--
-二进制文件
-
-
-
-l
-软链接文件
-link
-
-
-.
-隐藏文件
-
-
-
-b
-设备文件里面的可供存储的周边设备(可按块随机读取的设备)
-
-
-
-c
-设备文件里面的串行端
+public class InterruptBlockedMain {
+    public stat
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-11-11
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-03-13
                             </span>
                             <span class="publish-author">
                                 
@@ -849,6 +853,63 @@ c
                         </div>
                     </div>
 
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/JUC/" target="_blank">
+                            <span class="chip bg-color">JUC</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/03/13/juc-01-join-fang-fa-xiang-jie/" target="_blank">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Join方法详解">
+                            
+                            <span class="card-title">Join方法详解</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                            Join 方法详解
+  join() 用来等待一个线程的结束，是一种比较”暴力“的线程同步机制，必须等到一个线程结束后另一个线程才开始执行接下来的代码。
+  同时，join(3000)指定最长等待时间，如果等待时间超过指定的最长等待时间，那
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-03-13
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Java-基础/" class="post-category" target="_blank">
+                                    Java 基础
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/JUC/" target="_blank">
+                            <span class="chip bg-color">JUC</span>
+                        </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -870,11 +931,12 @@ c
             
         </div>
         <div class="page-info col m4 l4 hide-on-small-only">
-            <div class="center-align b-text-gray">6 / 6</div>
+            <div class="center-align b-text-gray">6 / 14</div>
         </div>
         <div class="col s6 m4 l4">
             
-            <a class="right btn-floating btn-large disabled">
+            <a href="/page/7/"
+               class="right btn-floating btn-large waves-effect waves-light bg-color">
                 <i class="fa fa-angle-right"></i>
             </a>
             
@@ -890,7 +952,7 @@ c
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">78.6k</span>
+            <span class="white-color">162.6k</span>
             
 
             <br>

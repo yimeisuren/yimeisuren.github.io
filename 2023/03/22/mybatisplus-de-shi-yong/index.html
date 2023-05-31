@@ -1242,16 +1242,14 @@ IDEA 使用配置远程连接Linux服务器
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            SpringBoot面试题SpringBoot 接口开发的常用注解有哪些?
+                            SpringBoot自动配置
 
+全部加载 127 自动配置类（预先写死）
 
-注解
-作用
+按照条件装配规则，按需注入
 
-
-
-@Controller
-标记此类是一个控制器，可以返回视图解析器指定的 html 页面，通过搭配 @ResponseBody 可以将结果返回 
+@ConditionalOnClass 注解
+保证了在类路径下发现某个类，才会注入Bean对象。而这个“某个类”，需要导入一些特定的包
                         
                     </div>
                     <div class="publish-info">
@@ -1441,7 +1439,7 @@ IDEA 使用配置远程连接Linux服务器
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">78.6k</span>
+            <span class="white-color">162.6k</span>
             
 
             <br>
