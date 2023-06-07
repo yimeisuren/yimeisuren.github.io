@@ -1,0 +1,2107 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Java">
+    <meta name="baidu-site-verification" content="fmlEuI34ir">
+    <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
+    <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
+    <meta name="description" content="Linux内核内核功能Linux系统的核心是内核. 内核控制着计算机系统上的所有硬件和软件, 在必要时分配硬件, 并根据需要执行软件.
+内核主要负责以下4种功能:
+
+系统内存管理
+内核不仅管理服务器上的可用物理内存, 还可以创建和管理虚拟内">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>熊水斌的博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?ce84511d3df71640a9378a69f6293044";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+    
+        <script>
+            (function(){
+                var bp = document.createElement('script');
+                var curProtocol = window.location.protocol.split(':')[0];
+                if (curProtocol === 'https') {
+                    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+                }
+                else {
+                    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                }
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(bp, s);
+            })();
+        </script>
+    
+
+    <script>
+        (function(){
+        var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+        document.write('<script src="' + src + '" id="sozz"><\/script>');
+        })();
+    </script>
+
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+<body>
+
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">熊水斌的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/contact" class="waves-effect waves-light">
+            
+            <i class="fa fa-comments"></i>
+            
+            <span>留言板</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">熊水斌的博客</div>
+        <div class="logo-desc">
+            
+            HUST | 计算机科学与技术
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        <li>
+            <a href="/contact" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-comments"></i>
+                
+                留言板
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/godweiyang/hexo-matery-modified" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/godweiyang/hexo-matery-modified" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        <span class="chip bg-color">无标签</span>
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-06-02
+                </div>
+
+                <div class="post-author info-break-policy">
+                    <i class="fa fa-user-o fa-fw"></i>作者:&nbsp;&nbsp;
+                    
+                    熊水斌
+                    
+                </div>
+
+                
+                
+                <div class="info-break-policy">
+                    <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    27 分
+                </div>
+                
+                
+
+                
+                <div id="busuanzi_container_page_pv" class="info-break-policy">
+                    <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                    <span id="busuanzi_value_page_pv"></span>
+                </div>
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Linux内核"><a href="#Linux内核" class="headerlink" title="Linux内核"></a>Linux内核</h1><h2 id="内核功能"><a href="#内核功能" class="headerlink" title="内核功能"></a>内核功能</h2><p>Linux系统的核心是内核. 内核控制着计算机系统上的所有硬件和软件, 在必要时分配硬件, 并根据需要执行软件.</p>
+<p>内核主要负责以下4种功能:</p>
+<ul>
+<li><p><u>系统内存管理</u></p>
+<p>内核不仅管理服务器上的可用物理内存, 还可以创建和管理虚拟内存(外存虚拟). 内核通过硬盘上的存储空间来实现虚拟内存, 这块区域称为==交换空间(swap space)==. 内核不断地交换<u>实际的物理内存和外存中交换空间</u>之间虚拟内存中的内容. 这使得系统以为它拥有比物理内存更多的可用内存.</p>
+<p>内存存储单元按组划分成很多块, 这些块称为<u>页面(page)</u>. 内核将页面放在物理内存或交换空间中. 然后内核维护一个内存页面表, 指明哪些页面位于物理内存中, 哪些页面被交换到交换空间中.</p>
+<p>内核会记录哪些内存页面正在使用, 并自动把一段时间未访问的内存页面复制到交换空间区域, 即使还有可用内存, 该过程称为<u>换出(swapping out)</u>. 当程序要访问一个在交换空间上的页面时, 内核需要为其分配物理内存或者换出另外一个内存页面.</p>
+</li>
+<li><p><u>软件程序管理</u></p>
+<p>内核创建<u>第一个进程(init进程)</u>, 从而启动系统上的其它所有进程. 当内核启动时, 它会将init进程加载到虚拟内存中. 内核在启动任何其它进程时, 都会在虚拟内存中给新进程分配一块专有区域来存储该进程用到的数据和代码.</p>
+<p>Linux操作系统采用了<u>运行级</u>. 运行级决定了init进程运行<code>/etc/inittab</code>文件或<code>/etc/rc[1-5].d</code>目录中定义好的某些特定类型的进程. Linux操作系统共有5个启动运行级.</p>
+<ul>
+<li>运行级为1时, 只启动基本的系统进程以及一个控制台终端进程, 我们称之为<u>单用户模式</u>. 单用户模式通常用来在系统有问题时进行紧急的文件系统维护, 在这种模式下, 只能由系统管理员登录到系统上操作数据.</li>
+<li>标准的启动运行级是3, 在这个运行级上大多数应用软件都会启动</li>
+<li>另一个常见的运行级是5, 在这个运行级上系统会启动图形化的X Window系统, 允许用户通过图形化桌面窗口登录系统.</li>
+</ul>
+</li>
+<li><p><u>硬件设备管理</u></p>
+<p>内核的另一职责是管理硬件设备, 任何Linux系统需要与之通信的设备, 都需要在内核代码中加入其驱动程序代码. 驱动程序代码相当于应用程序和硬件设备之间的中介, 允许内核与设备之间进行数据交换. 在Linux内核中有两种方式插入设备驱动代码:</p>
+<ul>
+<li>编译进内核的设备驱动代码</li>
+<li>可插入内核的设备驱动模块</li>
+</ul>
+<p>以前插入设备驱动代码的唯一途径是重新编译内核, 每次给系统添加新设备, 都需要重新编译一遍内核代码. 随着Linux内核支持的硬件设备越来越多, 这个过程变得越来越低效, Linux开发人员设计出一种更好的将驱动代码插入到运行中的内核的方法, 提出了<u>内核模块</u>的概念, <strong>它允许将驱动代码插入到运行中的内核而无需重新编译内核, 同时当设备不再使用时也可以将内核模块从内核中移走</strong>. 这种方式极大地简化和扩展了硬件设备在Linux上的使用.</p>
+<p>Linux系统将硬件设备当作特殊的文件, 称为设备文件. 设备文件共有3种分类:</p>
+<ul>
+<li><p><strong>字符型设备文件</strong></p>
+<p>字符型设备文件是指处理数据时每次只能处理一个字符的设备. 大多数类型的调制解调器和终端都是作为字符型设备文件创建的.</p>
+</li>
+<li><p><strong>块设备文件</strong></p>
+<p>块设备文件是指处理数据时每次能处理大块数据的设备, 比如硬盘.</p>
+</li>
+<li><p><strong>网络设备文件</strong></p>
+<p>网络设备文件是指采用数据包发送和接收数据的设备, 包括各种网卡和一个特殊的回环设备. <u>这个回环设备允许Linux系统使用常见的网络编程协议同自身通信.</u></p>
+</li>
+</ul>
+<p>Linux为系统上的<u>每个设备</u>都创建一种称为<u>节点</u>的特殊文件. 与设备的所有通信都通过设备节点完成, 每个节点都有唯一的数值对作为其标识符, 包括一个主设备号和一个次设备号. 类似的设备被划分到同样的主设备号下, 次设备号用于标识主设备组下的某个特定设备.</p>
+</li>
+<li><p><u>文件系统管理</u></p>
+<p>Linux内核<u>支持通过不同类型的文件系统</u>从硬盘中读写数据. 内核必须在编译时就加入所有可能用到的文件系统的支持.</p>
+<p>Linux服务器中访问的所有硬盘都必须格式化成下表所列文件系统类型中的一种. Linux内核采用虚拟文件系统(VFS)作为和每个文件系统交互的接口. 这为Linux内核同任何类型文件系统通信提供了一个标准接口. 当每个文件系统都被挂载和使用时, VFS将信息都缓存在内存中.</p>
+</li>
+</ul>
+<center>Linux文件系统</center>
+
+<table>
+<thead>
+<tr>
+<th>文件系统</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ext</td>
+<td>Linux扩展文件系统, 最早的Linux文件系统</td>
+</tr>
+<tr>
+<td>ext2</td>
+<td>第二扩展文件系统, 在ext的基础上提供了更多的功能</td>
+</tr>
+<tr>
+<td>ext3</td>
+<td>第三扩展文件系统, 支持日志功能</td>
+</tr>
+<tr>
+<td>ext4</td>
+<td>第四扩展文件系统, 支持高级日志功能</td>
+</tr>
+<tr>
+<td>hpfs</td>
+<td>OS/2高性能文件系统</td>
+</tr>
+<tr>
+<td>jfs</td>
+<td>ISM日志文件系统</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="GNU工具"><a href="#GNU工具" class="headerlink" title="GNU工具"></a>GNU工具</h2><p>核心GNU工具(core utilities)包括三个部分:</p>
+<ul>
+<li>管理进程的工具</li>
+<li>操作文本的工具</li>
+<li>处理文件的工具</li>
+</ul>
+<p>shell工具为用户提供了启动程序, 管理文件系统中的文件以及运行在Linux系统上的进程的途径. 如果需要将多个shell命令放在一起工作执行, 则可以使用<u>shell脚本</u>.</p>
+<h1 id="主机规划与磁盘分区"><a href="#主机规划与磁盘分区" class="headerlink" title="主机规划与磁盘分区"></a>主机规划与磁盘分区</h1><p><u>内容</u></p>
+<ul>
+<li>磁盘分区</li>
+<li>文件系统</li>
+<li>Linux操作较频繁的目录</li>
+</ul>
+<p><u>在Linux中, 一切皆文件</u></p>
+<center>常见设备及其在Linux系统中的文件名</center>
+
+<table>
+<thead>
+<tr>
+<th>设备</th>
+<th>设备在Linux内的文件名</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SCSI/SATA/USB硬盘</td>
+<td><code>/dev/sd[a-p]</code></td>
+</tr>
+<tr>
+<td>VirtI/O界面</td>
+<td><code>/dev/vd[a-p]</code></td>
+</tr>
+<tr>
+<td>软盘</td>
+<td><code>/dev/fd[0-7]</code></td>
+</tr>
+<tr>
+<td>打印机</td>
+<td><code>/dev/lp[0-2]</code><br><code>/dev/usb/lp[0-15]</code></td>
+</tr>
+<tr>
+<td>鼠标</td>
+<td><code>/dev/input/mouse[0-15]</code><br><code>/dev/psaux</code><br><code>/dev/mouse</code></td>
+</tr>
+<tr>
+<td>CDROM<br>DVDROM</td>
+<td><code>/dev/scd[0-1]</code><br><code>/dev/sr[0-1]</code><br><code>/dev/cdrom</code></td>
+</tr>
+<tr>
+<td>磁带机</td>
+<td><code>/dev/ht0</code><br><code>/dev/st0</code><br><code>/dev/tape</code></td>
+</tr>
+</tbody></table>
+<h2 id="磁盘分区"><a href="#磁盘分区" class="headerlink" title="磁盘分区"></a>磁盘分区</h2><p>以Windows系统的观点来看, 将一块磁盘分为C,D,E三个盘区, 则C,D,E就是<u>分区(partition)</u>.</p>
+<blockquote>
+<p>例题: 如果你的PC上面有两个SATA磁盘以及一个USB磁盘, 而主板上面有六个SATA的插槽. 这两个SATA磁盘分别安插在主板上的SATA1, SATA5插槽上, 请问这三个磁盘在Linux中的设备文件名为何？</p>
+</blockquote>
+<p>答: 由于是<u>使用侦测到的顺序来决定设备文件名, 并非与实际插槽代号有关</u>, 因此设备的文件名如下: </p>
+<ol>
+<li>SATA1插槽上的文件名: <code>/dev/sda</code></li>
+<li>SATA5插槽上的文件名: <code>/dev/sdb</code></li>
+<li>USB磁盘（开机完成后才被系统捉到）: <code>/dev/sdc</code></li>
+</ol>
+<h3 id="开机流程中的BIOS与UEFI开机检测程序"><a href="#开机流程中的BIOS与UEFI开机检测程序" class="headerlink" title="开机流程中的BIOS与UEFI开机检测程序"></a>开机流程中的BIOS与UEFI开机检测程序</h3><p>操作系统会控制所有的硬件并向上层应用程序提供核心功能, 因此计算机就能够认识硬盘内的文件系统, 并进一步读取硬盘内的软件文件与执行.</p>
+<p><strong>问题是, 操作系统也是软件, 那么计算机又是如何认识这个操作系统软件并且执行它的？ 明明开机时计算机中还没有任何软件系统, 那它要如何读取硬盘内的操作系统文件呢？这就得要牵涉到计算机的开机启动程序了！</strong></p>
+<p>目前主要有两种方式: 早期的BIOS和新的UEFI</p>
+<p>CMOS是记录各项硬件参数且嵌入在主板上面的储存器, BIOS则是一个写入到主板上的一个固件（固件就是写入到硬件上的一个软件程序）。</p>
+<h4 id="BIOS搭配MBR-GPT的开机流程"><a href="#BIOS搭配MBR-GPT的开机流程" class="headerlink" title="BIOS搭配MBR/GPT的开机流程"></a>BIOS搭配MBR/GPT的开机流程</h4><ol>
+<li><p>计算机系统会主动执行<u>BIOS程序</u>.</p>
+</li>
+<li><p>BIOS会分析计算机里面有哪些存储设备, 根据用户的设置, 到该硬盘里面区读取第一个扇区的<u>MBR</u>位置.</p>
+</li>
+<li><p>MBR这个仅有446B的硬盘容量里面会放置最基本的<u>开机管理程序(boot loader)</u>, 接下来就是MBR内的开机管理程序的工作了.</p>
+</li>
+<li><p>开机管理程序加载<u>核心文件</u></p>
+<p>开机管理程序是操作系统在安装的时候所提供的, 它会认识硬盘内的文件系统格式, 因此能够读取核心文件.</p>
+</li>
+<li><p>操作系统正常工作</p>
+</li>
+</ol>
+<p>如果分区表是GPT格式, 那么BIOS也能够从LBA0的MBR相容的区块读取第一阶段的开机管理程序码. 能否正常开机取决于boot loader是否能够识别GPT格式, 如果不能识别GPT, 则无法读取操作系统核心文件, 故而开机失败.</p>
+<h1 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h1><p>在图形化桌面出现之前, 与Unix系统进行交互的唯一方法是借助shell所提供的<u>文本命令行界面(command line interface, CLI)</u>. CLI只能接受文本输入, 也只能显示文本和基本的图形输出.</p>
+<h2 id="启动shell"><a href="#启动shell" class="headerlink" title="启动shell"></a>启动shell</h2><p>登录时启动的shell依赖于用户账户的配置, 在<code>/etc/passwd</code>文件中包含了所有系统用户账户列表以及每个用户的基本配置信息.</p>
+<pre class="line-numbers language-sh"><code class="language-sh">  1 root:x:0:0:root:/root:/bin/bash
+  2 bin:x:1:1:bin:/bin:/sbin/nologin
+  3 daemon:x:2:2:daemon:/sbin:/sbin/nologin
+  4 adm:x:3:4:adm:/var/adm:/sbin/nologin
+  5 lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+  6 sync:x:5:0:sync:/sbin:/bin/sync
+  7 shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+  8 halt:x:7:0:halt:/sbin:/sbin/halt
+  9 mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+ 10 operator:x:11:0:operator:/root:/sbin/nologin
+ 11 games:x:12:100:games:/usr/games:/sbin/nologin
+ 12 ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+ 13 nobody:x:99:99:Nobody:/:/sbin/nologin
+ 14 systemd-network:x:192:192:systemd Network Management:/:/sbin/nologin
+ 15 dbus:x:81:81:System message bus:/:/sbin/nologin
+ 16 polkitd:x:999:998:User for polkitd:/:/sbin/nologin
+ 17 sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+ 18 postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+ 19 xiong:x:1000:1000:xiong:/home/xiong:/bin/bash<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>每个条目有7个字段, 中间用冒号<code>:</code>分隔. 最后一个字段指明了用户使用的shell程序.</p>
+<p><u>bash shell程序会在登录后自动启动</u>, 但是是否显示命令行界面取决于登录方式, 如果是控制台终端登录则显示, 如果是图形化界面则不显示.</p>
+<h2 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h2><p>在Windows系统中, 会为每个物理磁盘驱动器分配一个盘符, 每个驱动器都会有自己的目录结构, 以便访问存储其中的文件.</p>
+<p>Linux在路径名中不使用驱动器盘符(即磁盘分区C,D,E…), 将文件存储在单个目录结构中, 这个目录称为<u>虚拟目录(virtual directory)</u>. Linux虚拟目录结构只包含一个称为根目录(root)的基础目录, 使用<code>/</code>表示. </p>
+<p>Linux系统中的路径本身并没有提供任何有关文件究竟存放在哪个物理磁盘上的信息, 例如<code>/opt/module/test.txt</code>. 而在Windows系统中, 如果外接USB, 假设其盘符为F, 则能够从路径中清楚地看出一个文件是否属于F盘, 即是否存放在U盘上.</p>
+<h3 id="Linux文件系统"><a href="#Linux文件系统" class="headerlink" title="Linux文件系统"></a>Linux文件系统</h3><p>在Linux系统上安装的<u>第一块硬盘称为根驱动器</u>. 根驱动器包含虚拟目录的核心, 其它目录都是从那里开始创建的. </p>
+<p>Linux会在根驱动器上创建一些特别的目录, 这些目录称为<u>挂载点(mount point)</u>. 挂载点是虚拟目录中用于分配额外存储设备的目录, 虚拟目录会让文件和目录出现在这些挂载点目录中, 然后实际上它们却存储在另外一个驱动器中. <u>挂载是将其他机器上的磁盘映射到本机器上来, 使得在本机器上可以访问其他机器的文件</u>.</p>
+<p>常见的目录名均遵循<u>文件系统层级标准(FHS, filesystem hierarchy standard)</u></p>
+<center>常见Linux目录名称</center>
+
+<table>
+<thead>
+<tr>
+<th align="center">目录</th>
+<th align="center">功能</th>
+<th>对应单词</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>/</code></td>
+<td align="center">与启动系统有关, 根目录, 通常不会在这里存储文件</td>
+<td>root</td>
+</tr>
+<tr>
+<td align="center"><code>/bin</code></td>
+<td align="center">二进制目录, 存放许多用户级的GNU工具</td>
+<td>binary</td>
+</tr>
+<tr>
+<td align="center"><code>/boot</code></td>
+<td align="center">启动目录, 存放启动文件</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><code>/etc</code></td>
+<td align="center">配置文件目录，如账号密码等</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><code>/dev</code></td>
+<td align="center">设备目录, Linux在这里创建设备节点</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><code>/home</code></td>
+<td align="center">普通用户的家(主)目录</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><code>/lib</code></td>
+<td align="center">库目录, 存放系统和应用程序的库文件</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><code>/media</code></td>
+<td align="center">可移动媒体的常用挂载点</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><code>/mnt</code></td>
+<td align="center">另一个挂载点</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><code>/opt</code></td>
+<td align="center">第三方软件包和数据文件</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><code>/proc</code></td>
+<td align="center">进程目录, 存放现有硬件和当前进程信息, 虚拟文件系统, 不要往里面写东西</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><code>/root</code></td>
+<td align="center">root用户的主目录</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><code>/sbin</code></td>
+<td align="center">系统二进制目录, 存放许多GNU管理员级工具, 只允许超级用户查看</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><code>/run</code></td>
+<td align="center">运行目录, 存放系统运作时的运行时数据</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><code>/srv</code></td>
+<td align="center">服务目录, 存放本地服务相关的文件</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><code>/sys</code></td>
+<td align="center">虚拟文件系统，不要往里面写东西。系统目录, 保存硬件和内核相关信息</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><code>/tmp</code></td>
+<td align="center">临时目录, 可以在该目录中创建和删除临时工作文件</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><code>/usr</code></td>
+<td align="center">用户存放系统软件资源目录, 软件存放处.大量用户级GNU工具和数据文件都在这</td>
+<td>unix software resource</td>
+</tr>
+<tr>
+<td align="center"><code>/var</code></td>
+<td align="center">动态数据保存位置, 与系统运行过程有关的日志文件等</td>
+<td>variable</td>
+</tr>
+<tr>
+<td align="center">/etc/opt</td>
+<td align="center">放置/opt的相关配置文件</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">/etc/X11</td>
+<td align="center">与x window有关的各种配置文件, 尤其是xorg.conf这个配置文件</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">/etc/sgml</td>
+<td align="center">与sgml格式有关的各项配置文件</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">/etc/xml</td>
+<td align="center">与xml格式有关的各项配置文件</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">/usr/local</td>
+<td align="center">第三方安装的软件保存位置</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">/var/mail</td>
+<td align="center">用户邮箱</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">/var/run</td>
+<td align="center">程序相关</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">/var/spool/news</td>
+<td align="center">新闻组</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">/var/lock</td>
+<td align="center">程序相关</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">lost+found</td>
+<td align="center">文件碎片</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">/misc</td>
+<td align="center">盘符</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">/usr/sbin</td>
+<td align="center">只允许超级用户</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">/usr/bin</td>
+<td align="center">在单用户模式(类似windows系统下的安全模式，用最少的资源恢复系统)下不能执行</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="访问目录cd"><a href="#访问目录cd" class="headerlink" title="访问目录cd"></a>访问目录<code>cd</code></h3><p>可以使用<u>绝对路径或相对路径</u></p>
+<h3 id="查看文件和目录ls"><a href="#查看文件和目录ls" class="headerlink" title="查看文件和目录ls"></a>查看文件和目录<code>ls</code></h3><ul>
+<li><p><code>pwd</code>: 查看当前目录的路径</p>
+</li>
+<li><p><code>ls</code>: 查看当前目录下的文件和子目录(列按字典序排列)</p>
+</li>
+<li><p><code>ls -a</code>: 查看包括<u>隐藏文件</u>在内的所有文件和子目录</p>
+</li>
+<li><p><code>ls -F</code>: 如果没有彩色终端仿真器的情况下, 可以区分出目录和文件</p>
+</li>
+<li><p><code>ls -R</code>: <u>递归显示</u>文件和目录, 即子目录下的文件和目录也会显示</p>
+</li>
+<li><p><code>ls -l</code>: 显示<u>文件详情</u>, 长列表</p>
+</li>
+<li><p><code>ls -l &lt;filename&gt;</code>: 过滤器, 只显示<code>&lt;filename&gt;</code>相关的文件信息</p>
+<p>可以使用<code>?, *, [], !, -</code>等通配符来匹配文件, 使用通配符来进行模式匹配的过程称为<u>文件扩展匹配(file globbing)</u>.</p>
+</li>
+</ul>
+<center>文件详情中的信息</center>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>文件类型</td>
+<td><code>d</code>: 目录<br><code>-</code>: 文件<br><code>c</code>: 字符型文件<br><code>b</code>: 块设备</td>
+</tr>
+<tr>
+<td>文件权限</td>
+<td></td>
+</tr>
+<tr>
+<td>文件的硬链接总数</td>
+<td></td>
+</tr>
+<tr>
+<td>文件的拥有者</td>
+<td></td>
+</tr>
+<tr>
+<td>文件的拥有组</td>
+<td></td>
+</tr>
+<tr>
+<td>文件的大小(单位: Byte)</td>
+<td></td>
+</tr>
+<tr>
+<td>文件的最近修改时间</td>
+<td></td>
+</tr>
+<tr>
+<td>文件名(或目录名)</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>输出示例:</strong></p>
+<pre class="line-numbers language-bash"><code class="language-bash">drwxr-xr-x.  2 root root      6 Apr 11  2018 xinetd.d
+drwxr-xr-x.  6 root root    100 Jun  5 14:11 yum
+-rw-r--r--.  1 root root    970 Oct  2  2020 yum.conf
+drwxr-xr-x.  2 root root    262 Jun  7 20:14 yum.repos.d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="处理文件"><a href="#处理文件" class="headerlink" title="处理文件"></a>处理文件</h3><ul>
+<li><p><code>touch &lt;filename&gt;</code>: 创建名为<code>&lt;filename&gt;</code>的空文件</p>
+</li>
+<li><p><code>cp -i &lt;source&gt; &lt;destination&gt;</code>: 将<code>&lt;source&gt;</code>文件复制到<code>&lt;destination&gt;</code>文件中, 使用<code>-i</code>选项会提示是否覆盖已有文件</p>
+</li>
+<li><p><code>cp -R &lt;sourceDir&gt; &lt;destinationDir&gt;</code>: 将目录文件递归的复制到另一个目录中, <code>-R</code>表示递归复制</p>
+<p>在cp命令中<u>可以使用通配符</u></p>
+</li>
+<li><p><code>ln -s &lt;filename&gt; &lt;linkname&gt;</code>: 创建名为<code>&lt;linkname&gt;</code>的软链接</p>
+</li>
+<li><p><code>ln &lt;filename&gt; &lt;linkname&gt;</code>: 创建名为<code>&lt;linkname&gt;</code>的硬链接</p>
+<p>链接文件包括硬链接和软链接(符号链接), 符号链接相当于创建了一个原文件的快捷方式. </p>
+<p><u>软链接文件保存的信息是原文件的文件路径, 软链接文件和原文件是两个完全不相同的文件.</u></p>
+<p>硬链接文件和原文件可以认为是同一个东西, 都是硬盘上的文件资源的一个入口, 新建硬链接会使得该资源的inode节点加1, 删除硬链接和原文件都会使得inode节点数减1, 只有当inode节点数为0时该资源才会被删除. 需要注意的是<u>硬链接不会使得原来硬盘上的资源拷贝复制一份</u>. 即原来占用1MB的文件不会因为创建硬链接而变为占用2MB.</p>
+</li>
+<li><p><code>mv &lt;source&gt; &lt;destination&gt;</code>: 移动文件, 如果是同一目录下, 则可以实现<strong>重命名文件</strong></p>
+</li>
+<li><p><code>rm &lt;filename&gt;</code>: 删除文件</p>
+</li>
+</ul>
+<h3 id="处理目录"><a href="#处理目录" class="headerlink" title="处理目录"></a>处理目录</h3><ul>
+<li><code>mkdir &lt;dirname&gt;</code>: 创建目录</li>
+<li><code>mkdir -p &lt;dirname&gt;/&lt;subdirname&gt;</code>: 选项<code>-p</code>帮助创建目录及其子目录</li>
+<li><code>rmdir &lt;dirname&gt;</code>: 删除<strong>空目录</strong></li>
+<li><code>rm -rf &lt;dirname&gt;</code>: 删除带有内容的目录(递归删除)</li>
+<li><code>tree &lt;dirname&gt;</code>: 以树形方式展示目录结构</li>
+</ul>
+<h2 id="监测程序"><a href="#监测程序" class="headerlink" title="监测程序"></a>监测程序</h2><ul>
+<li><code>ps</code>: 查看进程</li>
+<li><code>top</code>: 实时显示<u>进程</u></li>
+<li><code>kill &lt;pid&gt;</code>: 根据<code>&lt;pid&gt;</code>结束进程</li>
+</ul>
+<h2 id="监测磁盘空间"><a href="#监测磁盘空间" class="headerlink" title="监测磁盘空间"></a>监测磁盘空间</h2><h3 id="挂载"><a href="#挂载" class="headerlink" title="挂载"></a>挂载</h3><p>Linux文件系统将所有的磁盘都放入到虚拟目录下, 所以在使用新的存储媒体之前需要将其放到虚拟目录下, 这个过程称为<u>挂载(mounting)</u>. 大多数的Linux发行版都支持自动挂载可移动存储媒体, 例如CD-ROM, 软盘, U盘等.</p>
+<ul>
+<li><p><code>mount</code>: 默认输出当前系统中挂载的设备列表</p>
+<p>mount命令输出的信息由4个部分组成:</p>
+<ul>
+<li>媒体的设备文件名</li>
+<li>媒体挂载到虚拟目录的挂载点</li>
+<li>文件系统类型</li>
+<li>已挂载媒体的访问状态</li>
+</ul>
+<p>手动在虚拟目录中挂载设备, 需要root权限, 基本命令为<code>mount -t &lt;type&gt; &lt;device&gt; &lt;directory&gt;</code>: 表示将设备<code>&lt;device&gt;</code>以<code>&lt;type&gt;</code>的文件格式化类型挂载到<code>&lt;directory&gt;</code>目录</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token punctuation">[</span>root@hadoop100 ~<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># mount</span>
+sysfs on /sys <span class="token function">type</span> sysfs <span class="token punctuation">(</span>rw,nosuid,nodev,noexec,relatime,seclabel<span class="token punctuation">)</span>
+proc on /proc <span class="token function">type</span> proc <span class="token punctuation">(</span>rw,nosuid,nodev,noexec,relatime<span class="token punctuation">)</span>
+devtmpfs on /dev <span class="token function">type</span> devtmpfs <span class="token punctuation">(</span>rw,nosuid,seclabel,size<span class="token operator">=</span>1919884k,nr_inodes<span class="token operator">=</span>479971,mode<span class="token operator">=</span>755<span class="token punctuation">)</span>
+securityfs on /sys/kernel/security <span class="token function">type</span> securityfs <span class="token punctuation">(</span>rw,nosuid,nodev,noexec,relatime<span class="token punctuation">)</span>
+tmpfs on /dev/shm <span class="token function">type</span> tmpfs <span class="token punctuation">(</span>rw,nosuid,nodev,seclabel<span class="token punctuation">)</span>
+devpts on /dev/pts <span class="token function">type</span> devpts <span class="token punctuation">(</span>rw,nosuid,noexec,relatime,seclabel,gid<span class="token operator">=</span>5,mode<span class="token operator">=</span>620,ptmxmode<span class="token operator">=</span>000<span class="token punctuation">)</span>
+tmpfs on /run <span class="token function">type</span> tmpfs <span class="token punctuation">(</span>rw,nosuid,nodev,seclabel,mode<span class="token operator">=</span>755<span class="token punctuation">)</span>
+tmpfs on /sys/fs/cgroup <span class="token function">type</span> tmpfs <span class="token punctuation">(</span>ro,nosuid,nodev,noexec,seclabel,mode<span class="token operator">=</span>755<span class="token punctuation">)</span>
+cgroup on /sys/fs/cgroup/systemd <span class="token function">type</span> cgroup <span class="token punctuation">(</span>rw,nosuid,nodev,noexec,relatime,seclabel,xattr,release_agent<span class="token operator">=</span>/usr/lib/systemd/systemd-cgroups-agent,name<span class="token operator">=</span>systemd<span class="token punctuation">)</span>
+pstore on /sys/fs/pstore <span class="token function">type</span> pstore <span class="token punctuation">(</span>rw,nosuid,nodev,noexec,relatime<span class="token punctuation">)</span>
+cgroup on /sys/fs/cgroup/net_cls,net_prio <span class="token function">type</span> cgroup <span class="token punctuation">(</span>rw,nosuid,nodev,noexec,relatime,seclabel,net_prio,net_cls<span class="token punctuation">)</span>
+cgroup on /sys/fs/cgroup/perf_event <span class="token function">type</span> cgroup <span class="token punctuation">(</span>rw,nosuid,nodev,noexec,relatime,seclabel,perf_event<span class="token punctuation">)</span>
+cgroup on /sys/fs/cgroup/pids <span class="token function">type</span> cgroup <span class="token punctuation">(</span>rw,nosuid,nodev,noexec,relatime,seclabel,pids<span class="token punctuation">)</span>
+cgroup on /sys/fs/cgroup/hugetlb <span class="token function">type</span> cgroup <span class="token punctuation">(</span>rw,nosuid,nodev,noexec,relatime,seclabel,hugetlb<span class="token punctuation">)</span>
+cgroup on /sys/fs/cgroup/memory <span class="token function">type</span> cgroup <span class="token punctuation">(</span>rw,nosuid,nodev,noexec,relatime,seclabel,memory<span class="token punctuation">)</span>
+cgroup on /sys/fs/cgroup/cpuset <span class="token function">type</span> cgroup <span class="token punctuation">(</span>rw,nosuid,nodev,noexec,relatime,seclabel,cpuset<span class="token punctuation">)</span>
+cgroup on /sys/fs/cgroup/cpu,cpuacct <span class="token function">type</span> cgroup <span class="token punctuation">(</span>rw,nosuid,nodev,noexec,relatime,seclabel,cpuacct,cpu<span class="token punctuation">)</span>
+cgroup on /sys/fs/cgroup/devices <span class="token function">type</span> cgroup <span class="token punctuation">(</span>rw,nosuid,nodev,noexec,relatime,seclabel,devices<span class="token punctuation">)</span>
+cgroup on /sys/fs/cgroup/blkio <span class="token function">type</span> cgroup <span class="token punctuation">(</span>rw,nosuid,nodev,noexec,relatime,seclabel,blkio<span class="token punctuation">)</span>
+cgroup on /sys/fs/cgroup/freezer <span class="token function">type</span> cgroup <span class="token punctuation">(</span>rw,nosuid,nodev,noexec,relatime,seclabel,freezer<span class="token punctuation">)</span>
+configfs on /sys/kernel/config <span class="token function">type</span> configfs <span class="token punctuation">(</span>rw,relatime<span class="token punctuation">)</span>
+/dev/sda3 on / <span class="token function">type</span> xfs <span class="token punctuation">(</span>rw,relatime,seclabel,attr2,inode64,noquota<span class="token punctuation">)</span>
+selinuxfs on /sys/fs/selinux <span class="token function">type</span> selinuxfs <span class="token punctuation">(</span>rw,relatime<span class="token punctuation">)</span>
+systemd-1 on /proc/sys/fs/binfmt_misc <span class="token function">type</span> autofs <span class="token punctuation">(</span>rw,relatime,fd<span class="token operator">=</span>23,pgrp<span class="token operator">=</span>1,timeout<span class="token operator">=</span>0,minproto<span class="token operator">=</span>5,maxproto<span class="token operator">=</span>5,direct,pipe_ino<span class="token operator">=</span>12625<span class="token punctuation">)</span>
+mqueue on /dev/mqueue <span class="token function">type</span> mqueue <span class="token punctuation">(</span>rw,relatime,seclabel<span class="token punctuation">)</span>
+hugetlbfs on /dev/hugepages <span class="token function">type</span> hugetlbfs <span class="token punctuation">(</span>rw,relatime,seclabel<span class="token punctuation">)</span>
+debugfs on /sys/kernel/debug <span class="token function">type</span> debugfs <span class="token punctuation">(</span>rw,relatime<span class="token punctuation">)</span>
+fusectl on /sys/fs/fuse/connections <span class="token function">type</span> fusectl <span class="token punctuation">(</span>rw,relatime<span class="token punctuation">)</span>
+/dev/sda1 on /boot <span class="token function">type</span> xfs <span class="token punctuation">(</span>rw,relatime,seclabel,attr2,inode64,noquota<span class="token punctuation">)</span>
+tmpfs on /run/user/0 <span class="token function">type</span> tmpfs <span class="token punctuation">(</span>rw,nosuid,nodev,relatime,seclabel,size<span class="token operator">=</span>386132k,mode<span class="token operator">=</span>700<span class="token punctuation">)</span>
+binfmt_misc on /proc/sys/fs/binfmt_misc <span class="token function">type</span> binfmt_misc <span class="token punctuation">(</span>rw,relatime<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<ul>
+<li><p><code>umount &lt;directory&gt;</code>: 卸载指定设备</p>
+<p>从Linux系统上移除一个可移动设备时, 不能直接从系统上移出, 而应该先卸载. 使用umount来卸载设备, 如果有任何程序正在使用设备上的文件, 系统不会允许你卸载它.</p>
+</li>
+</ul>
+<h1 id="包管理系统PMS-package-management-system"><a href="#包管理系统PMS-package-management-system" class="headerlink" title="包管理系统PMS(package management system)"></a>包管理系统PMS(package management system)</h1><h2 id="包管理基础"><a href="#包管理基础" class="headerlink" title="包管理基础"></a>包管理基础</h2><p>PMS使用一个数据库来记录各种相关内容:</p>
+<ul>
+<li>Linux系统上<u>已经安装了什么软件包</u></li>
+<li><u>每个包安装了什么文件</u></li>
+<li>每个已安装软件包的<u>版本</u></li>
+</ul>
+<p>软件包存储在服务器上, 这些服务器称为<u>仓库(repository)</u>. 可以通过Linux系统中的PMS来下载或更新软件包.</p>
+<h2 id="基于Red-Hat系统"><a href="#基于Red-Hat系统" class="headerlink" title="基于Red Hat系统"></a>基于Red Hat系统</h2><h3 id="列出已安装的包"><a href="#列出已安装的包" class="headerlink" title="列出已安装的包"></a>列出已安装的包</h3><ul>
+<li><p>使用<code>yum list installed</code>在控制台输出, 或者使用<code>yum list installed &gt; &lt;filename&gt;</code><u>重定向输出</u>到文件中</p>
+</li>
+<li><p>使用<code>yum list installed &lt;packageName&gt;</code>查看指定包名<code>&lt;packageName&gt;</code>的包是否安装</p>
+</li>
+<li><p>使用<code>yum provides &lt;filename&gt;</code>查看<code>&lt;filename&gt;</code>文件属于哪个软件包</p>
+</li>
+</ul>
+<h3 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h3><ul>
+<li><p>使用<code>yum install &lt;packageName&gt;</code>从仓库中下载软件包并安装</p>
+</li>
+<li><p>也可以下载<code>rpm</code>安装包, 使用<code>yum localinstall &lt;packageName.rpm&gt;</code>进行本地安装</p>
+</li>
+</ul>
+<h3 id="更新软件"><a href="#更新软件" class="headerlink" title="更新软件"></a>更新软件</h3><ul>
+<li>使用<code>yum list updates</code>列出所有已安装软件包的可用更新</li>
+<li>使用<code>yum update</code>更新所有安装包</li>
+<li>使用<code>yum update &lt;packageName&gt;</code>更新<code>&lt;packageName&gt;</code>软件包</li>
+</ul>
+<h3 id="卸载软件"><a href="#卸载软件" class="headerlink" title="卸载软件"></a>卸载软件</h3><ul>
+<li>使用<code>yum remove &lt;packageName&gt;</code>卸载软件, 但保留配置文件和数据文件</li>
+<li>使用<code>yum erase &lt;packgeName&gt;</code>卸载软件并删除和它相关的所有文件</li>
+</ul>
+<h3 id="处理损坏的包依赖关系"><a href="#处理损坏的包依赖关系" class="headerlink" title="处理损坏的包依赖关系"></a>处理损坏的包依赖关系</h3><p>在安装多个软件包时, 某个包的软件依赖关系可能会被另一个包的安装覆盖掉, 这叫做<u>损坏的包依赖关系(broken dependency)</u>.</p>
+<p>如果系统出现该问题</p>
+<ol>
+<li>使用<code>yum clean all</code>进行尝试</li>
+<li>再使用<code>yum update</code>进行尝试</li>
+<li>最后使用<code>yum deplist &lt;packageName&gt;</code>查看包依赖关系, 知道依赖关系后可以手动进行安装</li>
+<li>如果还是无法解决, 使用<code>yum update --skip-broken</code>来跳过更新那些包依赖关系损坏的包而继续更新其它包</li>
+</ol>
+<h3 id="软件仓库"><a href="#软件仓库" class="headerlink" title="软件仓库"></a>软件仓库</h3><p>yum的仓库定义文件位于<code>/etc/yum.repos.d</code>, 通过编辑配置文件可以添加仓库, 一般需要配置正确的URL和加密密钥</p>
+<ul>
+<li>使用<code>yum repolist</code>查看目前配置可使用的仓库</li>
+</ul>
+<h2 id="通过源码进行软件安装"><a href="#通过源码进行软件安装" class="headerlink" title="通过源码进行软件安装"></a><u>通过源码进行软件安装</u></h2><ol>
+<li>下载<code>xxx.tar.gz</code>压缩包</li>
+<li>使用<code>tar -zxvf xxx.tar.gz</code>解压缩</li>
+<li>进入到解压后的文件目录中, 使用<code>./configure</code>查看是否具备库依赖环境, 若缺少则使用<code>yum</code>进行下载</li>
+<li>在满足依赖环境后, 使用<code>make</code>进行编译, 再使用<code>make install</code>进行安装</li>
+</ol>
+<h1 id="Vim编辑器"><a href="#Vim编辑器" class="headerlink" title="Vim编辑器"></a>Vim编辑器</h1><p>vi编辑器是Unix系统最初始的编辑器, 在GNU项目将vi编辑器一直到开源世界后, 将其进行一些改进, 并重命名为vim(vi improved)</p>
+<h2 id="vim安装"><a href="#vim安装" class="headerlink" title="vim安装"></a>vim安装</h2><p>在Centos7系统中, 使用<code>yum install -y vim</code>进行安装</p>
+<p>在Ubuntu系统中, 使用<code>sudo apt-get install vim</code>进行安装</p>
+<h2 id="vim基础"><a href="#vim基础" class="headerlink" title="vim基础"></a>vim基础</h2><p>vim在内存缓冲区中处理数据</p>
+<ul>
+<li>未指定文件名或文件不存在, 则开辟一段新的缓冲区域来编辑</li>
+<li>指定文件存在, 则将文件的整个内容读入到缓冲区中</li>
+</ul>
+<p>vim编辑器有两种操作模式: <u>普通模式和插入模式</u>. 在普通模式下, 输入的按键将会被解释为命令(<u>区分大小写</u>); 在插入模式下则输入文本内容.</p>
+<center>vim操作模式的相互转换</center> 
+
+<img src="https://namebucket.oss-cn-beijing.aliyuncs.com/img/%E6%99%AE%E9%80%9A%E6%A8%A1%E5%BC%8F%E5%92%8C%E6%8F%92%E5%85%A5%E6%A8%A1%E5%BC%8F.svg" style="zoom:25%;">
+
+<h3 id="普通模式"><a href="#普通模式" class="headerlink" title="普通模式"></a>普通模式</h3><ul>
+<li><code>方向键</code>: 上下左右</li>
+<li><code>&lt;PageDown&gt;/&lt;PageUp&gt;</code>: 向下/上翻页</li>
+<li><code>G</code>: 移到文本的最后一行</li>
+<li><code>gg</code>: 移动到文本的第一行</li>
+<li><code>&lt;num&gt; G</code>: 移动到文本的第<code>num</code>行</li>
+<li><code>:</code>: <u>命令行模式</u><ul>
+<li><code>q</code>: 如果未修改缓冲区数据, 则可以退出</li>
+<li><code>q!</code>: 取消对数据的修改并退出, 强制退出</li>
+<li><code>w &lt;filename&gt;</code>: 将数据保存到一个名为<code>filename</code>的文件中</li>
+<li><code>wq</code>: 保存数据修改并退出</li>
+</ul>
+</li>
+</ul>
+<h4 id="编辑命令"><a href="#编辑命令" class="headerlink" title="编辑命令"></a>编辑命令</h4><center>vim编辑命令</center>
+
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>描述</th>
+<th>拓展使用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>x/&lt;Delete&gt;</code></td>
+<td><u>删除</u>当前光标所在位置的字符</td>
+<td><code>2x</code></td>
+</tr>
+<tr>
+<td><code>dd</code></td>
+<td><u>删除</u>当前光标所在<u>行</u>的字符串</td>
+<td><code>5dd</code></td>
+</tr>
+<tr>
+<td><code>dw</code></td>
+<td><u>删除</u>当前光标所在位置的<u>单词</u></td>
+<td></td>
+</tr>
+<tr>
+<td><code>d$</code></td>
+<td><u>删除</u>当前光标至<u>行尾(<code>$</code>)</u>的内容</td>
+<td></td>
+</tr>
+<tr>
+<td><code>J</code></td>
+<td><u>删除</u>当前光标所在行行尾的<u>换行符(即拼接行)</u></td>
+<td></td>
+</tr>
+<tr>
+<td><code>u</code></td>
+<td><u>撤销</u></td>
+<td></td>
+</tr>
+<tr>
+<td><code>a</code></td>
+<td>在当前光标位置后<u>追加数据</u></td>
+<td></td>
+</tr>
+<tr>
+<td><code>A</code></td>
+<td>在当前光标所在行<u>行尾追加数据</u></td>
+<td></td>
+</tr>
+<tr>
+<td><code>r &lt;char&gt;</code></td>
+<td>用<code>&lt;char&gt;</code>字符替换当前光标所在位置的<u>单个字符</u></td>
+<td></td>
+</tr>
+<tr>
+<td><code>R &lt;text&gt;</code></td>
+<td>用<code>&lt;text&gt;</code>覆盖当前光标所在位置的数据, 直到按下esc键(<u>进入到REPLACE模式</u>)</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><u>删除命令</u>会将删除数据存放到寄存器中, 使用<code>p</code>命令可以取回数据, 搭配使用相当于<code>剪切 + 粘贴</code></p>
+<h4 id="复制和粘贴"><a href="#复制和粘贴" class="headerlink" title="复制和粘贴"></a>复制和粘贴</h4><p>复制命令和删除命令相类似, 只需要将<code>d</code>改为<code>y</code>即可. 由于复制不会影响到复制的文本, 因此只有当使用<code>p</code>命令进行粘贴之后才能清楚实际复制了什么内容. 当然, 这个问题可以通过<u>可视模式</u>进行解决, 按下<code>v</code>键会高亮文本, <u>高亮的内容即为选中的文本</u></p>
+<h4 id="查找和替换"><a href="#查找和替换" class="headerlink" title="查找和替换"></a>查找和替换</h4><ol>
+<li>输入<code>/</code>, 再输入需要查找的内容(<u>区分大小写</u>), 按下回车键即可查找</li>
+<li>找到内容后, 使用<code>n</code>可以查看下一个</li>
+<li>在<u>命令行模式</u>下才可以使用替换功能, 格式为<code>:s /&lt;old&gt;/&lt;new&gt;</code></li>
+</ol>
+<center>替换功能格式</center>
+
+<table>
+<thead>
+<tr>
+<th>格式</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>:s /&lt;old&gt;/&lt;new&gt;</code></td>
+<td>从当前光标到文件末尾查找<code>&lt;old&gt;</code>并将第一个替换为<code>&lt;new&gt;</code></td>
+</tr>
+<tr>
+<td><code>:s /&lt;old&gt;/&lt;new&gt;/g</code></td>
+<td>将当前光标所在行的<code>&lt;old&gt;</code>替换为<code>&lt;new&gt;</code></td>
+</tr>
+<tr>
+<td><code>:n,ms /&lt;old&gt;/&lt;new&gt;/g</code></td>
+<td>替换从行号<code>n</code>到行号<code>m</code>之间所有的<code>&lt;old&gt;</code></td>
+</tr>
+<tr>
+<td><code>:%s /&lt;old&gt;/&lt;new&gt;/g</code></td>
+<td>替换整个文件中所有的<code>&lt;old&gt;</code></td>
+</tr>
+<tr>
+<td><code>:%s /&lt;old&gt;/&lt;new&gt;/gc</code></td>
+<td>替换整个文件中所有的<code>&lt;old&gt;</code>且每次进行提示确认</td>
+</tr>
+</tbody></table>
+<h2 id="Vim其它设置"><a href="#Vim其它设置" class="headerlink" title="Vim其它设置"></a>Vim其它设置</h2><p>通过<code>vim ~/.vimrc</code>命令创建(或打开)<code>.vimrc</code>文件, 具体配置信息如下</p>
+<center>.vimrc文件配置及其含义</center>
+
+<table>
+<thead>
+<tr>
+<th>文件配置</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>set hlsearch</td>
+<td>高亮度反白</td>
+</tr>
+<tr>
+<td>set backspace=2</td>
+<td>可随时用退格键删除</td>
+</tr>
+<tr>
+<td>set autoindent</td>
+<td>自动缩进</td>
+</tr>
+<tr>
+<td>set ruler</td>
+<td>可显示最后一行的状态</td>
+</tr>
+<tr>
+<td>set showmode</td>
+<td>左下角那一行的状态</td>
+</tr>
+<tr>
+<td>set nu</td>
+<td>显示行号</td>
+</tr>
+<tr>
+<td>set bg=dark</td>
+<td>显示不同的底色</td>
+</tr>
+<tr>
+<td>syntax on</td>
+<td>语法高亮</td>
+</tr>
+</tbody></table>
+
+            </div>
+            <hr />
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">写作不易，客官能否打赏一杯奶茶？</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        <p class="reprint-tip">
+            <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;
+            <span>转载规则</span>
+        </p>
+        
+            <div class="center-align">
+                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                    <img alt=""
+                         style="border-width:0"
+                         src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
+                </a>
+            </div>
+            <br/>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title" rel="dct:type">
+                    《》
+                </span> 由
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2023/06/02/linux-05-linux-si-fang-cai/" property="cc:attributionName"
+               rel="cc:attributionURL">
+                熊水斌
+            </a> 采用
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                知识共享署名 4.0 国际许可协议
+            </a>进行许可。
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+    <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments input[type=text],
+    #vcomments input[type=email],
+    #vcomments input[type=url],
+    #vcomments textarea {
+        box-sizing: border-box;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #42b983;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div id="vcomments" class="card-content"></div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<!-- <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script> -->
+
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '查教程获取',
+        appKey: '查教程获取',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'false' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '如果你没有GitHub账号，还可以在这里评论啦！'
+    });
+</script>
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2023/06/04/bigdata-03-kafka-04-kafka-xiao-fei-zhe/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Kafka 消费者提交和偏移量Kafka 消费者在每次调用 poll() 方法时，总是返回由生产者写入 Kafka 但还没有被消费者读取过的记录。
+更新分区（partition）当前位置的操作叫做提交。
+Kafka 消费者提交偏移量offs
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2023-06-04
+                        </span>
+                        <span class="publish-author">
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/06/02/linux-04-linux-jiu-gai-zhe-me-xue/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            开源软件发展
+ 章节目录
+
+开源协议
+开源软件的盈利模式
+开源软件的优势
+Linux系统的发展
+常见的Linux系统版本
+
+
+开源协议从GPL到MIT的许可证协议越来越自由.
+
+开源软件的盈利模式
+多条产品线
+如MySQL数据库便有个人版和
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-06-02
+                            </span>
+                        <span class="publish-author">
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 熊水斌的博客<br />'
+            + '作者: 熊水斌<br />'
+            + '链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () { bodyElement.removeChild(newdiv); }, 200);
+    });
+</script>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            &copy; 2017-2020 WeiYang. 版权所有
+
+            
+            &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+            <span class="white-color">182.2k</span>
+            
+
+            <br>
+            <span id="sitetime"></span>
+
+            
+            
+            <br>
+            
+            <span id="busuanzi_container_site_pv" style='display:none'>
+                <i class="fa fa-heart-o"></i>
+                本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv" style='display:none'>
+                人次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+            </span>
+            
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/godweiyang" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:godweiyang@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="https://zhihu.com/people/godweiyang" class="tooltipped" target="_blank" data-tooltip="访问我的知乎" data-position="top" data-delay="50">
+        <i class="fa fa-inverse">知</i>
+    </a>
+
+
+
+    <a href="http://wpa.qq.com/msgrd?v=3&uin=792321264&site=qq&menu=yes" class="tooltipped" target="_blank" data-tooltip="访问我的知乎" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="https://weibo.com/godweiyang" class="tooltipped" target="_blank" data-tooltip="关注我的微博" data-position="top" data-delay="50">
+        <i class="fa fa-weibo"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+    $(document).ready(function () {
+
+        var int = setInterval(fixCount, 50);
+        var pvcountOffset = 80000;
+        var uvcountOffset = 20000;
+
+        function fixCount() {
+            if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
+                clearInterval(int);
+            }
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
+                clearInterval(int);
+            }
+        }
+    });
+</script>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2017, 09, 11, 00, 00, 00); //北京时间2018-2-13 00:00:00
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+    siteTime();
+</script>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <script type="text/javascript"> var OriginTitile = document.title, st; document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) })
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=查教程获取"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', '查教程获取');
+</script>
+
+
+
+    
+    <script src="/libs/others/clicklove.js"></script>
+    
+
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    <!-- 雪花特效 -->
+    
+
+</body>
+
+</html>
