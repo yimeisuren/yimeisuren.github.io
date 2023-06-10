@@ -41,28 +41,6 @@
   
   <entry>
     <title></title>
-    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/06/05/spring-zhu-jie-09-profile-huan-jing/"/>
-    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/06/05/spring-zhu-jie-09-profile-huan-jing/</id>
-    <published>2023-06-05T11:10:22.646Z</published>
-    <updated>2023-06-05T12:41:18.021Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Profile-的作用&quot;&gt;&lt;a href=&quot;#Profile-的作用&quot; class=&quot;headerlink&quot; title=&quot;@Profile 的作用&quot;&gt;&lt;/a&gt;@Profile
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
     <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/06/04/bigdata-03-kafka-04-kafka-xiao-fei-zhe/"/>
     <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/06/04/bigdata-03-kafka-04-kafka-xiao-fei-zhe/</id>
     <published>2023-06-04T07:16:22.159Z</published>
@@ -155,7 +133,7 @@
     <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/06/02/linux-10-pei-zhi-ruan-jian-cang-ku/"/>
     <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/06/02/linux-10-pei-zhi-ruan-jian-cang-ku/</id>
     <published>2023-06-02T09:04:28.262Z</published>
-    <updated>2023-06-02T10:51:43.454Z</updated>
+    <updated>2023-06-07T17:30:11.047Z</updated>
     
     <summary type="html">
     
@@ -437,7 +415,7 @@
     <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/05/23/spring-yuan-ma-jie-xi-09-mvc-zhi-xing-liu-cheng/"/>
     <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/05/23/spring-yuan-ma-jie-xi-09-mvc-zhi-xing-liu-cheng/</id>
     <published>2023-05-23T13:57:37.000Z</published>
-    <updated>2023-05-23T17:09:35.435Z</updated>
+    <updated>2023-06-07T17:29:07.212Z</updated>
     
     <summary type="html">
     
@@ -469,6 +447,28 @@
     
     
       <category term="Spring源码" scheme="https://github.com/yimeisuren/yimeisuren.github.io/tags/Spring%E6%BA%90%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://github.com/yimeisuren/yimeisuren.github.io/2023/05/20/java-20-fan-xing/"/>
+    <id>https://github.com/yimeisuren/yimeisuren.github.io/2023/05/20/java-20-fan-xing/</id>
+    <published>2023-05-20T15:39:53.859Z</published>
+    <updated>2023-05-20T17:39:48.644Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;泛型擦除&quot;&gt;&lt;a href=&quot;#泛型擦除&quot; class=&quot;headerlink&quot; title=&quot;泛型擦除&quot;&gt;&lt;/a&gt;泛型擦除&lt;/h1&gt;&lt;h2 id=&quot;无泛型边界的类型擦除&quot;&gt;&lt;a href=&quot;#无泛型边界的类型擦除&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
     
   </entry>
   

@@ -4,7 +4,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Java">
+    <meta name="keywords" content="锁, Java">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
@@ -20,7 +20,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>熊水斌的博客</title>
+    <title>锁 | 熊水斌的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -333,13 +333,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        
+                        锁
                     </div>
                 </div>
             </div>
@@ -449,7 +449,11 @@
                 <div class="col s7">
                     
                     <div class="article-tag">
-                        <span class="chip bg-color">无标签</span>
+                        
+                        <a href="/tags/JUC/" target="_blank">
+                            <span class="chip bg-color">JUC</span>
+                        </a>
+                        
                     </div>
                     
                 </div>
@@ -461,7 +465,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-02-03
+                    2023-03-14
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -920,9 +924,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《》
+                    《锁》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2023/02/03/juc-00-suo/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2023/03/14/juc-00-suo/" property="cc:attributionName"
                rel="cc:attributionURL">
                 熊水斌
             </a> 采用
@@ -1228,37 +1232,42 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/02/04/z-za-xiang-jrebel/">
+                <a href="/2023/03/14/juc-00-wu-suo-bing-fa/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="无锁并发">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">无锁并发</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Intellij热部署插件JRebel
+                            无锁并发使用 CAS 代替锁案例演示public interface Account {
+    int getBalance();
 
-
-安装JRebel
-
-
-
-1、在IDEA中一次点击 File-&gt;Settings-&gt;Plugins-&gt;Brows Repositories 
-2、在搜索框中输入JRebel进行搜索
+    void withdraw(int amount);
+}
+public class Thread
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2023-02-04
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2023-03-14
                         </span>
                         <span class="publish-author">
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JUC/" target="_blank">
+                        <span class="chip bg-color">JUC</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1270,33 +1279,39 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/11/26/spring-01-springdata-jian-jie/">
+                <a href="/2023/03/13/juc-02-synchronized-guan-jian-zi-xiang-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Synchronized关键字详解">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">Synchronized关键字详解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            SpringData架构对各种数据库操作的中间件, 提供一套统一的数据访问API, 支持关系型数据库和非关系型数据库
-
-
-SpringData的主要模块
-Spring Data Common: Spring Data的核心模块, 定义了Sp
+                            Synchronized关键字详解Monitor对象普通对象
+wait()和notify()只有获取了锁的线程才能够调用 wait() 方法和 notify() 方法。
+可重入锁 ReentrantLock通过 lockInterrupti
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-11-26
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-03-13
                             </span>
                         <span class="publish-author">
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JUC/" target="_blank">
+                        <span class="chip bg-color">JUC</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1442,6 +1457,25 @@ Spring Data Common: Spring Data的核心模块, 定义了Sp
 </main>
 
 
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<!-- 代码语言 -->
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+<!-- 代码块复制 -->
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
+<!-- 代码块收缩 -->
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> 
+<!-- 代码块折行 -->
+<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
+
+
     <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
@@ -1449,7 +1483,7 @@ Spring Data Common: Spring Data的核心模块, 定义了Sp
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">182.2k</span>
+            <span class="white-color">189.2k</span>
             
 
             <br>

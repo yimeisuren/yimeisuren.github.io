@@ -8,7 +8,7 @@
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="1. VMware 设置
+    <meta name="description" content="VMware 设置
 NAT 模式
 最小化安装（这会很多软件需要手动安装）
 静态 IP 地址配置
@@ -16,7 +16,7 @@ NAT 模式
 
 
 静态 IP 地址和主机名 hostname 可以在安装过程中直接通过图形化界面进行配置。
-假如 IPv">
+假如 IPv4 地">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -337,7 +337,7 @@ NAT 模式
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -479,7 +479,7 @@ NAT 模式
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    776
+                    764
                 </div>
                 
 
@@ -502,7 +502,7 @@ NAT 模式
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="1-VMware-设置"><a href="#1-VMware-设置" class="headerlink" title="1. VMware 设置"></a>1. VMware 设置</h1><ul>
+                <h1 id="VMware-设置"><a href="#VMware-设置" class="headerlink" title="VMware 设置"></a>VMware 设置</h1><ul>
 <li>NAT 模式</li>
 <li>最小化安装（这会很多软件需要手动安装）</li>
 <li>静态 IP 地址配置</li>
@@ -512,7 +512,7 @@ NAT 模式
 <p>静态 IP 地址和主机名 hostname 可以在安装过程中直接通过图形化界面进行配置。</p>
 <p>假如 IPv4 地址为 <strong>192.168.248.101</strong>，那么网关为 <strong>192.168.248.2</strong>，子网掩码为 <strong>255.255.255.0</strong>，DNS 服务器为 <strong>223.5.5.5</strong> 和 <strong>223.6.6.6</strong></p>
 </blockquote>
-<h1 id="2-CentOS-设置"><a href="#2-CentOS-设置" class="headerlink" title="2. CentOS 设置"></a>2. CentOS 设置</h1><h2 id="2-1-修改成静态-ip"><a href="#2-1-修改成静态-ip" class="headerlink" title="2.1 修改成静态 ip"></a>2.1 修改成静态 ip</h2><h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><pre class="line-numbers language-sh"><code class="language-sh"># 修改文件内容
+<h1 id="CentOS-设置"><a href="#CentOS-设置" class="headerlink" title="CentOS 设置"></a>CentOS 设置</h1><h2 id="修改成静态-ip"><a href="#修改成静态-ip" class="headerlink" title="修改成静态 ip"></a>修改成静态 ip</h2><h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><pre class="line-numbers language-sh"><code class="language-sh"># 修改文件内容
 vim /etc/sysconfig/network-scripts/ifcfg-ens32
 
 # 刷新网络设置
@@ -542,7 +542,7 @@ ip address<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <span class="token comment" spellcheck="true"># 唯二可能需要修改的地方</span>
 <span class="token attr-name">IPADDR</span><span class="token punctuation">=</span><span class="token attr-value">"192.168.248.101"</span>
 <span class="token attr-name">GATEWAY</span><span class="token punctuation">=</span><span class="token attr-value">"192.168.248.2"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="2-1-更换成-alibaba-的-yum-源"><a href="#2-1-更换成-alibaba-的-yum-源" class="headerlink" title="2.1 更换成 alibaba 的 yum 源"></a>2.1 更换成 alibaba 的 yum 源</h2><h3 id="命令-1"><a href="#命令-1" class="headerlink" title="命令"></a>命令</h3><pre class="line-numbers language-sh"><code class="language-sh"># 最小化安装没有vim, 只能使用vi命令
+<h2 id="更换成-alibaba-的-yum-源"><a href="#更换成-alibaba-的-yum-源" class="headerlink" title="更换成 alibaba 的 yum 源"></a>更换成 alibaba 的 yum 源</h2><h3 id="命令-1"><a href="#命令-1" class="headerlink" title="命令"></a>命令</h3><pre class="line-numbers language-sh"><code class="language-sh"># 最小化安装没有vim, 只能使用vi命令
 vi /etc/yum.repos.d/CentOS-Base.repo
 
 # 安装额外的软件仓库epel-release, 大多数rpm包在官方的仓库中找不到
@@ -615,14 +615,14 @@ yum install -y vim<span aria-hidden="true" class="line-numbers-rows"><span></spa
 <span class="token attr-name">gpgcheck</span><span class="token punctuation">=</span><span class="token attr-value">1</span>
 <span class="token attr-name">enabled</span><span class="token punctuation">=</span><span class="token attr-value">0</span>
 <span class="token attr-name">gpgkey</span><span class="token punctuation">=</span><span class="token attr-value">http://mirrors.aliyun.com/centos/RPM-GPG-KEY-CentOS-7</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="2-2-修改主机名"><a href="#2-2-修改主机名" class="headerlink" title="2.2 修改主机名"></a>2.2 修改主机名</h2><h3 id="命令-2"><a href="#命令-2" class="headerlink" title="命令"></a>命令</h3><pre class="line-numbers language-sh"><code class="language-sh"># 修改主机名
+<h2 id="修改主机名"><a href="#修改主机名" class="headerlink" title="修改主机名"></a>修改主机名</h2><h3 id="命令-2"><a href="#命令-2" class="headerlink" title="命令"></a>命令</h3><pre class="line-numbers language-sh"><code class="language-sh"># 修改主机名
 vim /etc/hostname<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h3 id="文件内容-2"><a href="#文件内容-2" class="headerlink" title="文件内容"></a>文件内容</h3><h4 id="hostname-文件"><a href="#hostname-文件" class="headerlink" title="hostname 文件"></a>hostname 文件</h4><pre class="line-numbers language-properties"><code class="language-properties">hadoop001<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="2-3-修改主机名映射（自定义域名）"><a href="#2-3-修改主机名映射（自定义域名）" class="headerlink" title="2.3 修改主机名映射（自定义域名）"></a>2.3 修改主机名映射（自定义域名）</h2><h3 id="命令-3"><a href="#命令-3" class="headerlink" title="命令"></a>命令</h3><pre class="line-numbers language-sh"><code class="language-sh">vim /etc/hosts<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="修改主机名映射（自定义域名）"><a href="#修改主机名映射（自定义域名）" class="headerlink" title="修改主机名映射（自定义域名）"></a>修改主机名映射（自定义域名）</h2><h3 id="命令-3"><a href="#命令-3" class="headerlink" title="命令"></a>命令</h3><pre class="line-numbers language-sh"><code class="language-sh">vim /etc/hosts<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="文件内容-3"><a href="#文件内容-3" class="headerlink" title="文件内容"></a>文件内容</h3><h4 id="hosts-文件"><a href="#hosts-文件" class="headerlink" title="hosts 文件"></a>hosts 文件</h4><pre class="line-numbers language-properties"><code class="language-properties"><span class="token attr-name">192.168.248.101</span> <span class="token attr-value">hadoop001</span>
 <span class="token attr-name">192.168.248.102</span> <span class="token attr-value">hadoop002</span>
 <span class="token attr-name">192.168.248.103</span> <span class="token attr-value">hadoop003</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h2 id="2-4-关闭防火墙"><a href="#2-4-关闭防火墙" class="headerlink" title="2.4 关闭防火墙"></a>2.4 关闭防火墙</h2><h3 id="命令-4"><a href="#命令-4" class="headerlink" title="命令"></a>命令</h3><pre class="line-numbers language-sh"><code class="language-sh"># 关闭防火墙
+<h2 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h2><h3 id="命令-4"><a href="#命令-4" class="headerlink" title="命令"></a>命令</h3><pre class="line-numbers language-sh"><code class="language-sh"># 关闭防火墙
 systemctl stop firewalld
 
 # 关闭防火墙开机自启动
@@ -1100,7 +1100,7 @@ systemctl status firewalld<span aria-hidden="true" class="line-numbers-rows"><sp
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="">
                         
                         <span class="card-title"></span>
                     </div>
@@ -1136,7 +1136,7 @@ systemctl status firewalld<span aria-hidden="true" class="line-numbers-rows"><sp
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="">
                         
                         <span class="card-title"></span>
                     </div>
@@ -1310,7 +1310,7 @@ systemctl status firewalld<span aria-hidden="true" class="line-numbers-rows"><sp
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">182.2k</span>
+            <span class="white-color">189.2k</span>
             
 
             <br>

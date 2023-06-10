@@ -331,7 +331,7 @@ wait()和notify()只有获取了锁的线程才能够调用 wait() 方法和 not
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/27.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -1041,24 +1041,23 @@ wait()和notify()只有获取了锁的线程才能够调用 wait() 方法和 not
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/03/14/juc-00-wu-suo-bing-fa/">
+                <a href="/2023/03/14/juc-00-suo/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="无锁并发">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="锁">
                         
-                        <span class="card-title">无锁并发</span>
+                        <span class="card-title">锁</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            无锁并发使用 CAS 代替锁案例演示public interface Account {
-    int getBalance();
+                            锁的两种实现可重入锁可以多次加锁, 加锁几次就要解锁几次 
+读写锁读写分离, 提高多线程的并发读的能力.
 
-    void withdraw(int amount);
-}
-public class Thread
+不同线程: 读锁和写锁互斥, 写锁和写锁互斥.
+同一线程: 支持锁降级, 不支持锁升级(写锁级别比读锁高, 获取到写锁后可以继续获取
                         
                     </div>
                     <div class="publish-info">
@@ -1092,7 +1091,7 @@ public class Thread
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Interrupt方法详解">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Interrupt方法详解">
                         
                         <span class="card-title">Interrupt方法详解</span>
                     </div>
@@ -1294,7 +1293,7 @@ public class InterruptBlockedMain {
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">182.2k</span>
+            <span class="white-color">189.2k</span>
             
 
             <br>
